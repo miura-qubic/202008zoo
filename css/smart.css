@@ -1,0 +1,95 @@
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ベース設定 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+body{-webkit-text-size-adjust: 100%;}
+html{
+	color: ;
+	font-size: ;
+	line-height: ;
+	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
+	/*font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
+	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
+	/*font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;*/
+	-webkit-text-size-adjust: 100%;
+}
+a{
+	color: ;
+}
+#wrapper{
+	width: 100%;
+	height: 100%;
+}
+section,
+.section{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.container{
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+	padding:0 2rem;
+}
+.is_pc{display: none;}
+.is_hidden_tab{display: none;}
+.objectCover {
+	width:100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%; 
+	font-family: 'object-fit: cover;object-position: 50% 50%;'
+}
+.objectContain {
+	width:100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: 50% 50%; 
+	font-family: 'object-fit: contain;object-position: 50% 50%;'
+}
+.point_reader{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.inertia{
+	-webkit-overflow-scrolling: touch;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ベース設定 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.menu_open{
+	width: 3rem;
+	position: relative;
+}
+.menu_open span{
+	position: absolute;
+	top:50%;
+	left:50%;
+	background: #fff;
+	width: 40%;
+	height: 2px;
+	transition: .3s;
+}
+.menu_open span:nth-of-type(1){transform:translate(-50%,-50%) translateY(5px);}
+.menu_open span:nth-of-type(2){transform:translate(-50%,-50%);}
+.menu_open span:nth-of-type(3){transform:translate(-50%,-50%) translateY(-5px);}
+.menu_open.active span:nth-of-type(1){transform:translate(-50%,-50%) rotate(45deg);}
+.menu_open.active span:nth-of-type(2){opacity: 0;}
+.menu_open.active span:nth-of-type(3){transform:translate(-50%,-50%) rotate(-45deg);}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+@media screen and (orientation:portrait) {/* 縦向き */}
+@media screen and (orientation:landscape) {/* 横向き */}

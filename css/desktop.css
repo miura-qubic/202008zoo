@@ -1,0 +1,92 @@
+
+/* @media screen and (min-width:1440px) {} */
+/* @media screen and (min-width:1280px) and ( max-width:1439px) {} */
+/* @media screen and (min-width:768px) and ( max-width:1279px) {} */
+/* @media screen and (min-width:1026px) and ( max-width:1279px) {} */
+/* @media screen and (min-width:768px) and ( max-width:1025px) {} */
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ベース設定 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+html{
+	color: ;
+	font-size:;
+	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
+	/*font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
+	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
+	/*font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;*/
+	line-height: ;
+}
+a{
+	color: ;
+	display: block;
+}
+#wrapper{
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	height: auto;
+}
+section,
+.section{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+@media screen and (min-width:1540px) {
+	.container{max-width: 1480px;}
+}
+@media screen and (min-width:1280px) and ( max-width:1539px) {
+	.container{max-width: 1280px;}
+}
+@media screen and (min-width:768px) and ( max-width:1279px) {
+	.container{max-width: none;}
+}
+.is_sp{display: none;}
+.is_tab{display: none;}
+@media screen and (min-width:751px) and ( max-width:1025px) {
+	.is_hidden_tab{display: none;}
+	.is_tab{display: block;}
+} 
+:root{
+	--colorname: ;
+}
+.objectCover {
+	width:100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%; 
+	font-family: 'object-fit: cover;object-position: 50% 50%;'
+}
+.objectContain {
+	width:100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: 50% 50%; 
+	font-family: 'object-fit: contain;object-position: 50% 50%;'
+}
+.point_reader{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ベース設定 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+ 
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+

@@ -1,0 +1,66 @@
+/*
+Theme Name: 
+Theme URI: https://
+Author: Qubic
+Author URI: https://qubic.jp
+Description: 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	word-break: break-all;
+}
+html,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+main{display: block;}
+a{text-decoration: none;}
+input,
+input:focus,
+textarea:focus{outline: 0;border-radius: 0;}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="submit"],
+input[type="button"],
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button,
+textarea{-webkit-appearance: none;border-radius: 0;}
+select{
+	outline:none;
+	text-indent: 0.01px;
+	text-overflow: '';
+	background: none transparent;
+	vertical-align: middle;
+	font-size: inherit;
+	color: inherit;
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;
+}
+select option{
+	background-color: #fff;
+	color: #333;
+}
+select::-ms-expand {display: none;}
+select:-moz-focusring { 
+	color: transparent; 
+	text-shadow: 0 0 0 #828c9a;
+}
+img{
+	vertical-align: bottom;
+	border: none;
+	max-width: 100%;
+}
+iframe{
+	max-width: 100%;
+	vertical-align: bottom;
+}
+li{list-style: none;}
+table{border-collapse: collapse;}
