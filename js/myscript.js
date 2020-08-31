@@ -79,4 +79,48 @@ $(function () {
 		currentCheck();
 	});
 
+	// Q&A 開閉
+	$('#qa_list dt').on('click',function(){
+		$(this).next('dd').slideToggle();
+		$(this).toggleClass('open');
+
+		if($(this).hasClass('open')){
+			$(this).find('img').attr('src', '../images/top/icon_qaclose.png');
+		}else{
+			$(this).find('img').attr('src', '../images/top/icon_qaopen.png');
+		}
+	});
+
+	$('.top10 .btn_wrap .btn01').hover(
+		function(){
+			$(this).children('img').attr('src', '../images/top/btn_contact01_on.png');
+		},
+		function(){
+			$(this).children('img').attr('src', '../images/top/btn_contact01.png');
+		}
+	);
+	$('.top10 .btn_wrap .btn02').hover(
+		function(){
+			$(this).children('img').attr('src', '../images/top/btn_contact02_on.png');
+		},
+		function(){
+			$(this).children('img').attr('src', '../images/top/btn_contact02.png');
+		}
+	);
+});
+
+// Voice Q&Aのボックスの高さ揃える
+$(window).on('load resize',function(){
+	var top07_dtArr = new Array();
+	var top07_img = new Array();
+	var top07_ddArr = new Array();
+	$('.top07 .item dt').each(function(i, element){
+		top07_dtArr[i] = $(this).innerHeight();
+	});
+	$('.top07 .item .img').each(function(i, element){
+		top07_img[i] = $(this).innerHeight();
+	});
+	$('.top07 .item dd').each(function(i, element){
+		top07_ddArr[i] = $(element).height(top07_img[i] - top07_dtArr[i]);
+	});
 });

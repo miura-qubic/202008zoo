@@ -195,7 +195,63 @@ section,
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+footer{
+	padding: 6rem 0 4rem;
+	border-top: solid 10px var(--blue);
+	color: #010c4f;
+}
+footer img{
+	width: 100%;
+	height: auto;
+}
+footer .box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer .box .leftbox .logo{
+	width: 20rem;
+}
+footer .box .rightbox{
+	display: flex;
+	align-items: center;
+	margin-left: 10rem;
+}
+footer .box .rightbox .img{
+	width: 4rem;
+	margin-right: 2rem;
+}
+footer .box .rightbox .txt .tel{
+	font-size: 3rem;
+	font-style: italic;
+	line-height: 1.2;
+}
+footer nav{
+	margin: 5rem 0;
+}
+footer nav ul{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+footer nav li{
+	border-right: solid 1px #010c4f;
+}
+footer nav li:last-of-type{
+	border-right: none;
+}
+footer nav li a{
+	color: #010c4f;
+	padding: 0 0.75rem;
+	line-height: 1;
+	transition: .3s;
+}
+footer nav li a:hover{
+	color: #e60012;
+}
+footer .copyright{
+	text-align: center;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -443,6 +499,10 @@ section,
 }
 .top07 .box .item{
 	display: flex;
+	margin-top: 4rem;
+}
+.top07 .box .item:first-of-type{
+	margin-top: 0;
 }
 .top07 .box .item .txt{
 	width: 65%;
@@ -452,7 +512,7 @@ section,
 .top07 .box .item .txt dt{
 	position: relative;
 	background: var(--blue);
-	padding: 2rem 2rem 2rem 7rem;
+	padding: 1rem 2rem 1rem 7rem;
 	height: 8rem;
 	display: flex;
 	align-items: center;
@@ -480,10 +540,126 @@ section,
 .top07 .box .item .txt dd::before{
 	content: 'A';
 }
+.top07 .box .item:first-of-type .img{
+	width: 35%;
+	max-height: 350px;
+	height: 100%;
+}
 .top07 .box .item .img{
 	width: 35%;
+	max-height: 560px;
+	height: 100%;
+}
+.top07 .credit{
+	color: #010c4f;
+	text-align: right;
+	margin-top: 0.5rem;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ07 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ08 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top08{
+	background: #696969;
+	padding: 8rem 0;
+}
+.top08 img{
+	width: 100%;
+	height: auto;
+}
+.top08 .txt p{
+	text-align: center;
+	margin: 6rem 0 1.5rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ08 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ09 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top09{
+	padding: 8rem 0;
+}
+.top09 #qa_list{
+	margin-top: 6rem;
+	font-family: "メイリオ", "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3",Verdana, Geneva, Arial, sans-serif;
+	font-weight: bold;
+}
+.top09 #qa_list dt{
+	cursor: pointer;
+	position: relative;
+	padding: 3.25rem;
+	border-bottom: 1px dotted #000;
+}
+.top09 #qa_list dt p{
+	background: url(../images/top/icon_qa01.png) no-repeat;
+	background-position: 0 0;
+	color: #333;
+	padding-left: 2.5rem;
+}
+.top09 #qa_list dt span{
+	position: absolute;
+	top: 50%;
+	right: 3.5rem;
+	transform: translateY(-50%);
+}
+.top09 #qa_list dd{
+	background: #3b3a42;
+	display: none;
+}
+.top09 #qa_list dd p{
+	padding: 3.25rem 3.25rem 3.25rem 5.75rem;
+	background: url(../images/top/icon_qa02.png) no-repeat;
+	background-position: 55px 55px;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ09 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ10 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top10{
+	background: #696969;
+	padding: 8rem 0;
+}
+.top10 .box{
+	margin-top: 6rem;
+}
+.top10 .box .txt{
+	text-align: center;
+}
+.top10 .box .txt p{
+	font-size: 1.2rem;
+	line-height: 2.4;
+}
+.top10 .box .txt p + p{
+	margin-top: 2.5rem;
+}
+.top10 .box .txt02{
+	padding: 1.5rem 2rem;
+	border: solid 3px #fb0202;
+	margin-top: 3rem;
+}
+.top10 .box .btn_wrap{
+	display: flex;
+	justify-content: center;
+	margin-top: 4rem;
+}
+.top10 .box .btn_wrap a{
+	width: 18rem;
+}
+.top10 .box .btn_wrap a:hover{
+	animation: flash 1s;
+}
+.top10 .box .pagetop{
+	width: 10rem;
+	margin: 0 auto;
+}
+.top10 .box .pagetop:hover{
+	animation: flash 1s;
+}
+@keyframes flash{
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ10 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
