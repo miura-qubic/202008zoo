@@ -35,6 +35,14 @@ $(function () {
 		});
 	}
 
+		// ハンバーガーメニュークリック時
+		$('.menu_open').click(function () {
+			$('.gnav_sp').slideToggle();
+		});
+		$('.gnav_sp li a').click(function () {
+			$('.gnav_sp').slideUp();
+		});
+
 	$('a[href^="#"]').click(function() {
 		let href= $(this).attr("href");
 		let target = $(href);
@@ -91,36 +99,22 @@ $(function () {
 		}
 	});
 
-	$('.top10 .btn_wrap .btn01').hover(
-		function(){
-			$(this).children('img').attr('src', '../images/top/btn_contact01_on.png');
-		},
-		function(){
-			$(this).children('img').attr('src', '../images/top/btn_contact01.png');
-		}
-	);
-	$('.top10 .btn_wrap .btn02').hover(
-		function(){
-			$(this).children('img').attr('src', '../images/top/btn_contact02_on.png');
-		},
-		function(){
-			$(this).children('img').attr('src', '../images/top/btn_contact02.png');
-		}
-	);
 });
 
 // Voice Q&Aのボックスの高さ揃える
 $(window).on('load resize',function(){
-	var top07_dtArr = new Array();
-	var top07_img = new Array();
-	var top07_ddArr = new Array();
-	$('.top07 .item dt').each(function(i, element){
-		top07_dtArr[i] = $(this).innerHeight();
-	});
-	$('.top07 .item .img').each(function(i, element){
-		top07_img[i] = $(this).innerHeight();
-	});
-	$('.top07 .item dd').each(function(i, element){
-		top07_ddArr[i] = $(element).height(top07_img[i] - top07_dtArr[i]);
-	});
+	if(w > spwidth){
+		var top07_dtArr = new Array();
+		var top07_img = new Array();
+		var top07_ddArr = new Array();
+		$('.top07 .item dt').each(function(i, element){
+			top07_dtArr[i] = $(this).innerHeight();
+		});
+		$('.top07 .item .img').each(function(i, element){
+			top07_img[i] = $(this).innerHeight();
+		});
+		$('.top07 .item dd').each(function(i, element){
+			top07_ddArr[i] = $(element).height(top07_img[i] - top07_dtArr[i]);
+		});
+	}
 });

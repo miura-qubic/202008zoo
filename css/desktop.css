@@ -80,7 +80,7 @@ section,
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .gothic{
-	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+	font-family: sans-serif;
 }
 .marugothic{
 	font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
@@ -121,11 +121,9 @@ section,
 }
 .ttl_wrap.blue .ttl::before{
 	background: url(../images/common/ttl_fig_blue.png) center /contain no-repeat;
-	left: -5rem;
 }
 .ttl_wrap.blue .ttl::after{
 	background: url(../images/common/ttl_fig_blue.png) center /contain no-repeat;
-	right: -5rem;
 }
 .ttl_wrap p{
 	margin-top: -0.5rem;
@@ -300,7 +298,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .top03{
-	background: url(../images/top/top03_bg.png) center center / cover no-repeat;
+	background: url(../images/top/top03_bg.png) center center / 1920px auto no-repeat;
 	padding: 8rem 0;
 }
 .top03 .box{
@@ -319,7 +317,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .top04{
-	background: url(../images/top/top04_bg.png) center center / cover no-repeat;
+	background: url(../images/top/top04_bg.png) center center / 1920px auto no-repeat;
 	padding: 8rem 0;
 }
 .top04 .box{
@@ -467,13 +465,12 @@ footer .copyright{
 	line-height: 1.4;
 }
 .top06 .txt02{
-	margin: 5rem;
+	margin: 5rem 0;
 	text-align: center;
 }
 .top06 .txt02 p{
 	display: inline;
 	font-size: 1.2rem;
-	font-weight: bold;
 	background: linear-gradient(transparent 50%, #d00e36 60%);
 }
 .top06 .txt02 .img_wrap{
