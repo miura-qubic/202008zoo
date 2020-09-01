@@ -198,7 +198,7 @@ footer img{
 	height: auto;
 }
 footer .box .leftbox .logo{
-	width: 14rem;
+	width: 13rem;
 	margin: 0 auto;
 }
 footer .box .rightbox{
@@ -232,6 +232,7 @@ footer nav li:last-of-type{
 footer nav li a{
 	color: #010c4f;
 	padding: 0.75rem;
+	font-size: 0.9rem;
 	line-height: 1;
 	transition: .3s;
 }

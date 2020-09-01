@@ -103,7 +103,7 @@ $(function () {
 
 // Voice Q&Aのボックスの高さ揃える
 $(window).on('load resize',function(){
-	if(w > spwidth){
+	if(w > tabletwidth){
 		var top07_dtArr = new Array();
 		var top07_img = new Array();
 		var top07_ddArr = new Array();
