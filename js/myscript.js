@@ -4,35 +4,38 @@
 const w = $(window).width();
 const spwidth = 767;
 const tabletwidth = 1025;
-
+const pagename = document.getElementById("pagename").value;
 {
 	const openMenu = document.getElementById('menu_open');
 	const Nav = document.querySelector('header nav');
 
-	openMenu.addEventListener('click', function () {
-		openMenu.classList.toggle('active');
-		Nav.classList.toggle('active');
-	});
+	if(pagename !== 'contact'){
+		openMenu.addEventListener('click', function () {
+			openMenu.classList.toggle('active');
+			Nav.classList.toggle('active');
+		});
+	}
 }
 
 
 $(function () {
 
 // JQueryの範囲
-
-	if(w > spwidth){
-		// グローバルナビをスクロール時に固定する
-		let nav = $('.gnav');
-		let offset = nav.offset();
-		$(window).scroll(function(){
-			if($(window).scrollTop() > offset.top){
-				nav.addClass('fixed');
-				$('.top02').addClass('fixed');
-			}else{
-				nav.removeClass('fixed');
-				$('.top02').removeClass('fixed');
-			}
-		});
+	if(pagename !== 'contact'){
+		if(w > spwidth){
+			// グローバルナビをスクロール時に固定する
+			let nav = $('.gnav');
+			let offset = nav.offset();
+			$(window).scroll(function(){
+				if($(window).scrollTop() > offset.top){
+					nav.addClass('fixed');
+					$('.top02').addClass('fixed');
+				}else{
+					nav.removeClass('fixed');
+					$('.top02').removeClass('fixed');
+				}
+			});
+		}
 	}
 
 		// ハンバーガーメニュークリック時
@@ -49,6 +52,22 @@ $(function () {
 		let position = target.offset().top;
 		$('body,html').stop().animate({scrollTop:position}, 500);   
 	});
+
+	if(pagename === 'contact'){
+		// チェックボックス
+		$("input.ichk").iCheck({
+			checkboxClass: "icheckbox_square-red"//, using theme
+		// radioClass: "iradio_square-red"
+		});
+		$("input.iradio").iCheck({
+			// checkboxClass: "icheckbox_square-red"//, using theme
+		radioClass: "iradio_square-red"
+		});
+		//Easy Select Box
+		jQuery(function () {
+			jQuery('select.eazy').easySelectBox({speed:200});
+		});
+	}
 
 
 	let navLink = $('nav.gnav li a');

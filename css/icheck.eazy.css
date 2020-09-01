@@ -1,0 +1,172 @@
+/* eazyselectbox
+----------------------------------- */
+/* Core CSS. Do not edit unless your sure */
+.easy-select-box{
+	display:inline-block;
+	position:relative;
+}
+.easy-select-box .esb-dropdown{
+	position:absolute;
+	top:100%;
+	left:0;
+	z-index:99;
+	display:none;
+}
+
+/* Default Presentation CSS. You can edit appearance here or create a custom class below */
+.easy-select-box{
+  background: #eee;
+  border: none;
+  text-align:left;
+  font-size:13px;
+  color:#818181;
+}
+.easy-select-box .esb-displayer{
+	background: url(../images/common/icon-pulldown.png) no-repeat right top;
+	color:#0c2245;
+	cursor: default;
+	height: 33px;
+	line-height:33px;
+	padding:0 3px;
+	text-indent: 5px;
+	width: 195px;
+
+}
+.easy-select-box .esb-displayer:hover {
+  filter: alpha(opacity=80);
+  -ms-filter: 'alpha(opacity=80)';
+  opacity: .8;
+}
+.easy-select-box:hover .esb-displayer{
+	text-decoration:none;
+}
+.easy-select-box.disabled .esb-displayer,
+.easy-select-box:hover.disabled .esb-displayer{
+	background-position: 0 -36px;
+}
+.easy-select-box .esb-dropdown{
+  background: #fff;
+  border: 1px solid #ccc;
+  display: none;
+  max-height: 200px;
+  overflow: auto;
+  position: absolute;
+  z-index: 999;
+	width: 200px;
+}
+.easy-select-box  .esb-item{
+	padding:3px;
+	background:#fff;
+	color:#333;
+	cursor:default;
+}
+.easy-select-box .esb-item:hover{
+	background:#d2ba85;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+
+
+/* Custom Presentation CSS. You can edit appearance here 
+.easy-select-box-nice{
+	text-align:left;
+	color:#0c2245;
+	min-width:200px;
+}
+.easy-select-box-nice .esb-displayer{
+	background: url(images/bg-select-2.png) no-repeat right 0;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	padding:0 5px;
+	height:37px;
+	line-height:37px;
+	cursor: default;
+	border-radius:10px;
+}
+.easy-select-box-nice:hover .esb-displayer{
+	background-position: right -37px;
+}
+.easy-select-box-nice.disabled .esb-displayer,
+.easy-select-box-nice:hover.disabled .esb-displayer{
+	background-position: right -74px;
+	color:#ccc;
+}
+.easy-select-box-nice .esb-dropdown{
+	border:1px solid #cccccc;
+	background:#FFFFFF;
+}
+.easy-select-box-nice .esb-dropdown .esb-item{
+	padding:3px 5px;
+	cursor:default;
+}
+.easy-select-box-nice .esb-dropdown .esb-item:hover{
+	background:#3399ff;
+	color:#FFFFFF;
+}
+
+*/
+
+
+/* iCheck plugin Square skin, red
+----------------------------------- */
+.icheckbox_square-red,
+.iradio_square-red {
+	display: inline-block;
+	*display: inline;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	background: url(../images/common/red.png) no-repeat;
+	border: none;
+	cursor: pointer;
+}
+.iradio_square-red {
+	width: 21px;
+	height: 21px;
+}
+.icheckbox_square-red {
+	background-position: 0 0;
+}
+	.icheckbox_square-red.hover {
+		background-position: -22px 0;
+	}
+	.icheckbox_square-red.checked {
+		background-position: -44px 0;
+	}
+	.icheckbox_square-red.disabled {
+		background-position: -70px 0;
+		cursor: default;
+	}
+	.icheckbox_square-red.checked.disabled {
+		background-position: -94px 0;
+	}
+
+.iradio_square-red {
+	background-position: -111px 0;
+}
+	.iradio_square-red.hover {
+		background-position: -133px 0;
+	}
+	.iradio_square-red.checked {
+		background-position: -155px 0;
+	}
+	.iradio_square-red.disabled {
+		background-position: -203px 0;
+		cursor: default;
+	}
+	.iradio_square-red.checked.disabled {
+		background-position: -216px 0;
+	}
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (min-resolution: 1.25dppx) {
+	.icheckbox_square-red,
+	.iradio_square-red {
+		background-image: url(../images/common/red@2x.png);
+		-webkit-background-size: 240px 24px;
+		background-size: 240px 24px;
+	}
+}

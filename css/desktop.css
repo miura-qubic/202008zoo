@@ -138,6 +138,9 @@ section,
 	content: '＞';
 	margin-right: 0.5rem;
 }
+.yellow{
+	color: #ffff00;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -710,3 +713,249 @@ footer .copyright{
  
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ contact01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.contact01{
+	background: #696969;
+	text-align: center;
+	padding: 5rem 0;
+}
+.contact01 #contact_form{
+	margin: 6rem 0 10rem;
+}
+.contact01 #contact_form h3{
+	font-size: 2rem;
+	margin: 3rem 0 2rem;
+}
+.contact01 dl.form{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 1rem;
+	text-align: left;
+	width: 100%;
+	max-width: 1000px;
+	margin:0 auto;
+}
+.contact01 dl.form h3,
+.contact01 dl.form p{
+	width:100%;
+	text-align: center;
+}
+.contact01 dl.form p{
+	margin:0 0 2rem;
+}
+.contact01 dl.form .wide{
+	width: 100%;
+	border-bottom: none;
+	margin: 0 0 2rem;
+}
+.contact01 dl.form dt{
+		border-left: 2px solid #d00e36;
+		border-bottom: solid 1px #fcfcfb;
+		margin-bottom: 2rem;
+		padding: 1rem;
+		width: 30%;
+}
+.contact01 dl.form dt.full{
+	width:100%;
+}
+.contact01 dl.form dt span.yellow{
+	margin-left: 1rem;
+	font-size: 0.8rem;
+}
+.contact01 dl.form .txtbox{
+	border-bottom: dotted 1px #fcfcfb;
+	margin-bottom: 2rem;
+	padding: 1rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+}
+.contact01 dl.form .txtbox1{
+	width:  68%;
+}
+.contact01 dl.form .txtbox2{ 
+	width:100%;
+	margin-top: -2rem;
+}
+.contact01 dl.form .txtbox3{
+	width: 33.33%;
+	border-bottom: none;
+	margin-bottom: 0;
+	padding:0;
+}
+.contact01 dl.form .txtbox3 label{
+	padding-left:1rem;
+}
+.icheckbox_square-red, .iradio_square-red{
+	background-image: url(../images/common/red.png) !important;
+}
+.contact01 dl.form .shortbox{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.contact01 dl.form .txtbox1 input{
+	width: 100%;
+}
+.contact01 dl.form .txtbox2 input{
+	width: 80%;
+}
+.contact01 dl.form .txtbox .select{
+	width:100%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contact01 dl.form .txtbox .select + .select{
+	margin-top: 2rem;
+}
+.contact01 dl.form .txtbox .select label{
+	display: inline-block;
+	width: 15%;
+	vertical-align: middle;
+}
+.contact01 dl.form .txtbox .select input[type="date"]{
+	display: inline-block;
+	background: #fff;
+	color: #000;
+	padding: 0.5rem 1.5rem;
+	border: none;
+	width: 40%;
+	border-radius: 0;
+}
+.contact01 dl.form .txtbox .select select{
+	display: inline-block;
+	background: #fff;
+	color: #000;
+	padding: 0.5rem 1.5rem;
+	border-radius: 0;
+	-webkit-appearance: initial;
+	-moz-appearance: initial;
+	/* width: 84%; */
+	width: 40%;
+	height: 100%;
+}
+.contact01 dl.form .txtbox .select::before{
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	right:0;
+	height: 100%;
+	width: 3rem;
+	text-align: center;
+	content: '▼';
+	display: block;
+	background: #eee;
+	color: #000;
+	line-height: 2.5;
+	pointer-events: none;
+}
+.contact01 dl.form .chk-dt{
+	height: 16rem;
+}
+.contact01 dl.form .chk-box{
+	border-bottom: dotted 1px #fcfcfb;
+	width: 68%;
+	height: 16rem;
+}
+.contact01 dl.form input.post1{
+	width: 15rem;
+}
+.contact01 dl.form input.num_people{
+	width: 10rem;
+	margin-right: 0.5rem;
+}
+.contact01 input,
+.contact01 dl.form textarea {
+	font-size: 1rem;
+}
+.contact01 dl.form input[type=text],
+.contact01 dl.form input[type=number],
+.contact01 dl.form input[type=tel],
+.contact01 dl.form input[type=email] ,
+.contact01 dl.form textarea{
+	border: none;
+	padding: 0.5rem;
+	background: #eee;
+	color: #333;
+}
+.contact01 dl.form select{
+	border: none;
+}
+.contact01 dl.form input[type=button] {
+	width: 10rem;
+	margin-left: 1rem;
+}
+.contact01 dl.form textarea{
+	width:100%;
+	height: 20rem;
+}
+.contact01 .submit_btn{
+	width: 100%;
+	max-width: 1000px;
+	border: solid 3px #d00e36;
+	background: inherit;
+	padding: 1rem 0;
+	transition: .3s;
+	background: #d00e36;
+	cursor: pointer;
+	color: #fff;
+	font-size:  1.2rem;
+	font-weight: bold;
+}
+.contact01 .submit_btn:hover{
+	background: transparent;
+	color: #d00e36;
+}
+.contact01 .agreement_box{
+	margin: 2rem auto 4rem;
+	max-width:1000px;
+}
+.contact01 .agreement_box .inner{
+	margin: 0.5rem 0 0;
+	text-align: left;
+}
+.contact01 .agreement_box .inner p{
+	margin: 1rem 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ contact01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ プライバシーポリシー コピーライト ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.privacypolicy{
+	width: 100%;
+	max-width:1000px;
+	margin: 0 auto;
+	border: 1px solid #fff;
+	padding:2rem 3rem;
+	font-size: 1rem;
+	overflow-y: scroll;
+	height: 300px;
+	text-align: left;
+}
+.privacypolicy h3{
+	color: #d00e36;
+	font-size: 1.5rem;
+	margin:2rem 0;
+	text-align: center;
+}
+.privacypolicy h4{
+	color: #d00e36;
+	font-size: 1.2rem;
+	margin:2rem 0 1.5rem;
+}
+.privacypolicy ol{
+	margin: 1rem 0 1rem 2rem;
+}
+.privacypolicy ol li{
+	list-style: decimal;
+}
+.privacypolicy p{
+	margin: 1rem 0;
+}
+.copy{ 
+	margin:5rem 0 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ プライバシーポリシー コピーライト ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
