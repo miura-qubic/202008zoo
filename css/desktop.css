@@ -110,8 +110,17 @@ section,
 	width: 7rem;
 	height: 7rem;
 	position: absolute;
+	/* top: 50%; */
+	/* transform: translateY(-50%) translateY(0.5rem); */
+	opacity : 0.01;
+  transform : translateY(100px);
+  transition : .6s .3s;
+}
+.ttl_wrap .ttl.active::before,
+.ttl_wrap .ttl.active::after{
 	top: 50%;
 	transform: translateY(-50%) translateY(0.5rem);
+	opacity : 1;
 }
 .ttl_wrap .ttl::before{
 	background: url(../images/common/ttl_fig_white.png) center /contain no-repeat;
@@ -133,18 +142,100 @@ section,
 .txt_links{
 	margin-top: 1rem;
 	text-align: right;
+	transition: .3s;
 }
 .txt_links::before{
 	content: '＞';
 	margin-right: 0.5rem;
 }
-.yellow{
-	color: #ffff00;
+.txt_links:hover{
+	color: rgba(255, 255, 255, 0.6);
 }
+.red{
+	color: #ff0000;
+}
+.fadein{
+	opacity : 0.01;
+  transform : translate(0, 100px);
+  transition : 1s;
+}
+.fadein_left{
+	opacity : 0.01;
+	transform : translate(-800px, 0);
+	/* transition : 1s; */
+	transition: 1s cubic-bezier(.79,.01,.33,.9);
+}
+.fadein_right{
+	opacity : 0.01;
+	transform : translate(800px, 0);
+	transition: 1s cubic-bezier(.79,.01,.33,.9);
+}
+.fadein.active,
+.fadein_left.active,
+.fadein_right.active{
+	opacity : 1;
+	transform : translate(0, 0);
+}
+
+.Slide-Inner-List-Item-Box{
+	overflow: hidden;
+}
+.Slide-Inner-List-Item-Box.isShow .Slide-Inner-List-Item-Box-ImgBox{
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.Slide-Inner-List-Item-Box-ImgBox {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	-webkit-transform: translate3d(-100.5%, 0, 0);
+	transform: translate3d(-100.5%, 0, 0);
+	-webkit-transform-origin: left;
+	transform-origin: left;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.Slide-Inner-List-Item-Box-ImgBox-Img {
+	width: 100%;
+	transition-duration: 4s;
+	-webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.Slide-Inner-List-Item-Box.isShow .Slide-Inner-List-Item-Box-ImgBox::before{
+	-webkit-transform: scale(0, 1);
+	transform: scale(0, 1);
+}
+.Slide-Inner-List-Item-Box-ImgBox::before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	background-color: #000;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+	-webkit-transform-origin: right;
+	transform-origin: right;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-.gnav.fixed{
+.gnav.fixed,
+.lower .gnav.active{
 	position: fixed;
 	top: 0;
 	z-index: 9999;
@@ -182,14 +273,16 @@ section,
 	bottom:1rem;
 	width:40%;
 	height: 2px;
-	background:#e60012;
+	/* background:#e60012; */
+	background: #fdf400;
 	content: '';
 	transform: scale(0,1);
 	transition: .3s;
 }
 .gnav ul li a.current,
 .gnav ul li a:hover{
-	color: #e60012;
+	/* color: #e60012; */
+	color: #fdf400;
 }
 .gnav ul li a.current::before,
 .gnav ul li a:hover::before{
@@ -324,8 +417,13 @@ footer .copyright{
 }
 .top03 article a{
 	display: flex;
-	padding: 0.6rem 0;
+	padding: 0.8rem 0;
 	border-bottom: solid 1px #ff0000;
+	font-size: 0.9rem;
+	transition: .3s;
+}
+.top03 article a:hover{
+	color: rgba(255,255,255,0.6);
 }
 .top03 article a time{
 	margin-right: 1.5rem;
@@ -468,7 +566,7 @@ footer .copyright{
 	background: var(--blue);
 	text-align: center;
 	padding: 2rem;
-	height: 100%;
+	/* height: 100%; */
 }
 .top06 .box .item .txt h3{
 	font-size: 1.4rem;
@@ -722,7 +820,7 @@ footer .copyright{
 .contact01 #contact_form{
 	margin: 6rem 0 10rem;
 }
-.contact01 #contact_form h3{
+.contact01 #contact_form h2{
 	font-size: 2rem;
 	margin: 3rem 0 2rem;
 }
@@ -736,7 +834,7 @@ footer .copyright{
 	max-width: 1000px;
 	margin:0 auto;
 }
-.contact01 dl.form h3,
+.contact01 dl.form h2,
 .contact01 dl.form p{
 	width:100%;
 	text-align: center;
@@ -759,7 +857,7 @@ footer .copyright{
 .contact01 dl.form dt.full{
 	width:100%;
 }
-.contact01 dl.form dt span.yellow{
+.contact01 dl.form dt span.red{
 	margin-left: 1rem;
 	font-size: 0.8rem;
 }
@@ -835,6 +933,11 @@ footer .copyright{
 	-webkit-appearance: initial;
 	-moz-appearance: initial;
 	/* width: 84%; */
+	width: 100%;
+	height: 100%;
+}
+.contact01 dl.form .txtbox .select .select_in{
+	position: relative;
 	width: 40%;
 	height: 100%;
 }
@@ -852,6 +955,7 @@ footer .copyright{
 	color: #000;
 	line-height: 2.5;
 	pointer-events: none;
+	z-index: 2;
 }
 .contact01 dl.form .chk-dt{
 	height: 16rem;
@@ -935,13 +1039,13 @@ footer .copyright{
 	height: 300px;
 	text-align: left;
 }
-.privacypolicy h3{
+.privacypolicy h2{
 	color: #d00e36;
 	font-size: 1.5rem;
 	margin:2rem 0;
 	text-align: center;
 }
-.privacypolicy h4{
+.privacypolicy h3{
 	color: #d00e36;
 	font-size: 1.2rem;
 	margin:2rem 0 1.5rem;
@@ -955,7 +1059,29 @@ footer .copyright{
 .privacypolicy p{
 	margin: 1rem 0;
 }
-.copy{ 
-	margin:5rem 0 0;
-}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ プライバシーポリシー コピーライト ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ privacy01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.privacy01{
+	background: #696969;
+	padding: 5rem 0;
+}
+.privacy01 .box{
+	max-width: 1000px;
+	margin:  6rem auto 0;
+}
+.privacy01 .box h2{
+	color: #d00e36;
+	font-size: 1.2rem;
+	margin:2rem 0 1.5rem;
+}
+.privacy01 .box ol{
+	margin: 1rem 0 1rem 2rem;
+}
+.privacy01 .box ol li{
+	list-style: decimal;
+}
+.privacy01 .box p{
+	margin: 1rem 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ privacy01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */

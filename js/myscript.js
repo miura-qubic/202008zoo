@@ -4,24 +4,22 @@
 const w = $(window).width();
 const spwidth = 767;
 const tabletwidth = 1025;
-const pagename = document.getElementById("pagename").value;
+// const pagename = document.getElementById("pagename").value;
 {
 	const openMenu = document.getElementById('menu_open');
 	const Nav = document.querySelector('header nav');
 
-	if(pagename !== 'contact'){
-		openMenu.addEventListener('click', function () {
-			openMenu.classList.toggle('active');
-			Nav.classList.toggle('active');
-		});
-	}
+	openMenu.addEventListener('click', function () {
+		openMenu.classList.toggle('active');
+		Nav.classList.toggle('active');
+	});
 }
 
 
 $(function () {
 
 // JQueryの範囲
-	if(pagename !== 'contact'){
+	// if(pagename !== 'contact'){
 		if(w > spwidth){
 			// グローバルナビをスクロール時に固定する
 			let nav = $('.gnav');
@@ -30,45 +28,42 @@ $(function () {
 				if($(window).scrollTop() > offset.top){
 					nav.addClass('fixed');
 					$('.top02').addClass('fixed');
+					$('.lower .gnav').addClass('active');
 				}else{
 					nav.removeClass('fixed');
 					$('.top02').removeClass('fixed');
+					$('.lower .gnav').removeClass('active');
 				}
 			});
 		}
-	}
+	// }
 
-		// ハンバーガーメニュークリック時
-		$('.menu_open').click(function () {
-			$('.gnav_sp').slideToggle();
-		});
-		$('.gnav_sp li a').click(function () {
-			$('.gnav_sp').slideUp();
-		});
-
-	$('a[href^="#"]').click(function() {
-		let href= $(this).attr("href");
-		let target = $(href);
-		let position = target.offset().top;
-		$('body,html').stop().animate({scrollTop:position}, 500);   
+	// ハンバーガーメニュークリック時
+	$('.menu_open').click(function () {
+		$('.gnav_sp').slideToggle();
+	});
+	$('.gnav_sp li a').click(function () {
+		$('.menu_open').removeClass('active');
+		$('.gnav_sp').slideUp();
 	});
 
-	if(pagename === 'contact'){
-		// チェックボックス
-		$("input.ichk").iCheck({
-			checkboxClass: "icheckbox_square-red"//, using theme
-		// radioClass: "iradio_square-red"
-		});
-		$("input.iradio").iCheck({
-			// checkboxClass: "icheckbox_square-red"//, using theme
-		radioClass: "iradio_square-red"
-		});
-		//Easy Select Box
-		jQuery(function () {
-			jQuery('select.eazy').easySelectBox({speed:200});
-		});
+	// スムーススクロール 
+	var headerHeight = $('header').outerHeight();
+	var urlHash = location.hash;
+	if(urlHash) {
+		$('body,html').stop().scrollTop(0);
+		setTimeout(function(){
+				var target = $(urlHash);
+				var position = target.offset().top - headerHeight;
+				$('body,html').stop().animate({scrollTop:position}, 500);
+		}, 100);
 	}
-
+	$('a[href^="#"]').click(function() {
+		var href= $(this).attr("href");
+		var target = $(href);
+		var position = target.offset().top - headerHeight;
+		$('body,html').stop().animate({scrollTop:position}, 500);   
+	});
 
 	let navLink = $('nav.gnav li a');
 	let contentsArr = new Array();
@@ -104,7 +99,28 @@ $(function () {
 	}
 	$(window).on('load scroll', function () {
 		currentCheck();
+
+		// fadein
+		$('.fadein, .fadein_left, .fadein_right').each(function () {
+			var position = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > position - windowHeight + 200) {
+				$(this).addClass('active');
+			}
+		});
 	});
+
+	$('.JS_ScrollItem').each(function(){
+    let $item = $(this);
+    $(window).on('scroll', function(){
+      let top = $item.offset().top; // ターゲットの位置取得
+      let position = top - $(window).height();  // イベントを発火させたい位置
+      if($(window).scrollTop() > position){
+        $item.addClass('isShow');
+      }
+    });
+  });
 
 	// Q&A 開閉
 	$('#qa_list dt').on('click',function(){
@@ -117,6 +133,23 @@ $(function () {
 			$(this).find('img').attr('src', '../images/top/icon_qaopen.png');
 		}
 	});
+
+
+	// if(pagename === 'contact'){
+		// チェックボックス
+		$("input.ichk").iCheck({
+			checkboxClass: "icheckbox_square-red"//, using theme
+		// radioClass: "iradio_square-red"
+		});
+		$("input.iradio").iCheck({
+			// checkboxClass: "icheckbox_square-red"//, using theme
+			radioClass: "iradio_square-red"
+		});
+		//Easy Select Box
+		jQuery(function () {
+			jQuery('select.eazy').easySelectBox({speed:200});
+		});
+	// }
 
 });
 

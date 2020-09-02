@@ -94,8 +94,17 @@ section,
 	width: 3.5rem;
 	height: 3.5rem;
 	position: absolute;
+	/* top: 50%;
+	transform: translateY(-50%) translateY(0.5rem); */
+	opacity : 0.01;
+	transform : translateY(100px);
+	transition : .6s .3s;
+}
+.ttl_wrap .ttl.active::before,
+.ttl_wrap .ttl.active::after{
 	top: 50%;
 	transform: translateY(-50%) translateY(0.5rem);
+	opacity : 1;
 }
 .ttl_wrap .ttl::before{
 	background: url(../images/common/ttl_fig_white.png) center /contain no-repeat;
@@ -121,6 +130,30 @@ section,
 .txt_links::before{
 	content: '＞';
 	margin-right: 0.5rem;
+}
+.red{
+	color: #ff0000;
+}
+.fadein{
+	opacity : 0.01;
+  transform : translate(0, 100px);
+  transition : 1s;
+}
+.fadein_left{
+	opacity : 0.01;
+	transform : translate(-800px, 0);
+	transition : 1s;
+}
+.fadein_right{
+	opacity : 0.01;
+	transform : translate(800px, 0);
+	transition : 1s;
+}
+.fadein.active,
+.fadein_left.active,
+.fadein_right.active{
+	opacity : 1;
+	transform : translate(0, 0);
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -220,14 +253,8 @@ footer .box .rightbox .txt .tel{
 	line-height: 1.2;
 }
 footer nav{
-	margin: 3rem 0;
+	margin: 2rem 0;
 	text-align: center;
-}
-footer nav li{
-	border-right: solid 1px #010c4f;
-}
-footer nav li:last-of-type{
-	border-right: none;
 }
 footer nav li a{
 	color: #010c4f;
@@ -290,7 +317,7 @@ footer .copyright{
 }
 .top03 article a{
 	font-size: 0.9rem;
-	padding: 0.75rem 0;
+	padding: 1rem 0;
 	border-bottom: solid 1px #ff0000;
 }
 .top03 article a time{
@@ -600,6 +627,255 @@ footer .copyright{
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ contact01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.contact01{
+	background: #696969;
+	text-align: center;
+	padding: 2.5rem 0 3.5rem;
+}
+.contact01 #contact_form{
+	margin: 3rem 0;
+}
+.contact01 #contact_form h2{
+	font-size: 1.4rem;
+	margin: 2rem 0 1rem;
+}
+.contact01 #contact_form p{
+	text-align: left;
+}
+.contact01 dl.form{
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+.contact01 dl.form .wide{
+	width: 100%;
+	border-bottom: none;
+}
+.contact01 dl.form dt{
+		border-left: 2px solid #d00e36;
+		margin: 1rem 0 0;
+		padding: 0.5rem;
+}
+.contact01 dl.form dt span.red{
+	margin-left: 1rem;
+}
+.contact01 dl dd label{
+	margin-left: 1rem;
+}
+.icheckbox_square-red, .iradio_square-red{
+	background-image: url(../images/common/red.png) !important;
+}
+.contact01 dl.form .txtbox{
+	border-bottom: dotted 1px #fcfcfb;
+	margin-bottom: 1rem;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.contact01 dl.form .txtbox1{
+	width: 100%;
+}
+.contact01 dl.form .txtbox2{
+	width: 100%;
+}
+.contact01 dl.form .txtbox3{
+	width: 100%;
+	border-bottom: none;
+	margin-bottom: 0;
+	padding:0;
+}
+.contact01 dl.form .shortbox{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.contact01 dl.form .txtbox .select{
+	width:100%;
+}
+.contact01 dl.form .txtbox .select label{
+	display: inline-block;
+	width: 20%;
+	vertical-align: middle;
+	margin:0;
+}
+.contact01 dl.form .txtbox .select input[type="date"]{
+	display: inline-block;
+	background: #fff;
+	color: #000;
+	padding: 0.5rem;
+	border: none;
+	width: 100%;
+	border-radius: 0;
+}
+.contact01 dl.form .txtbox .select + .select{
+	margin-top: 1rem;
+}
+.contact01 dl.form .txtbox .select select{
+	display: inline-block;
+	background: #fff;
+	color: #000;
+	padding: 0.5rem;
+	border-radius: 0;
+	-webkit-appearance: initial;
+	-moz-appearance: initial;
+	width: 100%;
+	font-size: 16px;
+}
+.contact01 dl.form .txtbox .select .select_in{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 0.5rem;
+}
+.contact01 dl.form .txtbox .select .select_in::before{
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	right:0;
+	height: 95%;
+	width: 3rem;
+	text-align: center;
+	content: '▼';
+	display: block;
+	background: #eee;
+	color: #000;
+	line-height: 2.5;
+	pointer-events: none;
+	z-index: 2;
+}
+.contact01 dl.form .txtbox1 input{
+	width: 100%;
+}
+.contact01 dl.form .txtbox2 label{
+	width: 18%;
+}
+.contact01 dl.form .txtbox2 input{
+	width: 82%;
+}
+.contact01 dl.form .chk-box{
+	border-bottom: dotted 1px #fcfcfb;
+	width: 100%;
+	padding: 2rem 0;
+}
+.contact01 dl.form input.post1{
+	width: 15rem;
+}
+.contact01 dl.form input.num_people{
+	width: 10rem;
+	margin-right: 0.5rem;
+}
+.contact01 dl.form input[type=text],
+.contact01 dl.form input[type=number],
+.contact01 dl.form input[type=tel],
+.contact01 dl.form input[type=email] ,
+.contact01 dl.form textarea{
+	border: none;
+	padding: 1rem;
+	background: #eee;
+	color: #333;
+	font-size: 16px;
+}
+.contact01 dl.form textarea{
+	width:100%;
+	height: 10rem;
+}
+.contact01 dl.form input[type=button] {
+	width: 10rem;
+	margin-left: 1rem;
+}
+.contact01 .submit_btn{
+	width: 100%;
+	background: #d00e36;
+	border: 1px solid #d00e36;
+	color: #fff;
+	padding: 1rem 0;
+	font-weight: bold;
+	font-size: 1rem;
+}
+.contact01 .agreement_box{
+	margin: 1rem 0;
+}
+.contact01 .agreement_box .inner{
+	margin: 1rem 0 0;
+	text-align: left;
+	display: flex;
+	flex-wrap:wrap;
+	align-items: flex-start;
+}
+.contact01 .agreement_box .inner .icheckbox_square-red{
+	width:20px;
+	margin: 0.5rem 0 0;
+}
+.contact01 .agreement_box .inner label{
+	flex:1;
+	padding:0 0 0 0.75rem;
+	font-size: 0.9rem;
+}
+.contact01 .agreement_box .inner p{
+	margin: 0.5rem 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ contact01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ プライバシーポリシー コピーライト ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.privacypolicy{
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid #fff;
+	padding:1rem;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch;
+	height: 200px;
+	text-align: left;
+}
+.privacypolicy h2{
+	color: #d00e36;
+	font-size: 1.2rem;
+	margin:1rem 0;
+	text-align: center;
+}
+.privacypolicy h3{
+	color: #d00e36;
+	font-size: 1.2xrem;
+	margin:1.5rem 0 1rem;
+}
+.privacypolicy ol{
+	margin: 1rem 0 1rem 2rem;
+}
+.privacypolicy ol li{
+	list-style: decimal;
+}
+.privacypolicy p{
+	margin: 1rem 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ プライバシーポリシー コピーライト ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ privacy01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.privacy01{
+	background: #696969;
+	padding: 2.5rem 0;
+}
+.privacy01 .box{
+	margin-top: 3rem;
+}
+.privacy01 .box h2{
+	color: #d00e36;
+	font-size: 1.2rem;
+	margin: 1.5rem 0 1rem;
+}
+.privacy01 .box ol{
+	margin: 1rem 0 1rem 2rem;
+}
+.privacy01 .box ol li{
+	list-style: decimal;
+}
+.privacy01 .box p{
+	margin: 1rem 0;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ privacy01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 @media screen and (orientation:portrait) {/* 縦向き */}
 @media screen and (orientation:landscape) {/* 横向き */}
