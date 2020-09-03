@@ -101,7 +101,7 @@ $(function () {
 		currentCheck();
 
 		// fadein
-		$('.fadein, .fadein_left, .fadein_right').each(function () {
+		$('.fadein, .fadein_left, .fadein_right, .fade1').each(function () {
 			var position = $(this).offset().top;
 			var scroll = $(window).scrollTop();
 			var windowHeight = $(window).height();
@@ -168,5 +168,10 @@ $(window).on('load resize',function(){
 		$('.top07 .item dd').each(function(i, element){
 			top07_ddArr[i] = $(element).height(top07_img[i] - top07_dtArr[i]);
 		});
+	}
+
+	if(w > spwidth){
+		var sliderImg = $('.top06 .item .txt').eq(0).innerHeight();
+		$('.top06 .item .txt').innerHeight(sliderImg);
 	}
 });

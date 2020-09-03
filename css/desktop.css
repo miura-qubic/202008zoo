@@ -162,7 +162,6 @@ section,
 .fadein_left{
 	opacity : 0.01;
 	transform : translate(-800px, 0);
-	/* transition : 1s; */
 	transition: 1s cubic-bezier(.79,.01,.33,.9);
 }
 .fadein_right{
@@ -176,37 +175,35 @@ section,
 	opacity : 1;
 	transform : translate(0, 0);
 }
-
+.fade1{
+	opacity : 0;
+	transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+}
+.fade1.active{
+	opacity : 1;
+}
 .Slide-Inner-List-Item-Box{
 	overflow: hidden;
 }
 .Slide-Inner-List-Item-Box.isShow .Slide-Inner-List-Item-Box-ImgBox{
-	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 }
-.Slide-Inner-List-Item-Box-ImgBox {
+.Slide-Inner-List-Item-Box-ImgBox{
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-	-webkit-transform: translate3d(-100.5%, 0, 0);
 	transform: translate3d(-100.5%, 0, 0);
-	-webkit-transform-origin: left;
 	transform-origin: left;
-	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
-	-webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
 }
-.Slide-Inner-List-Item-Box-ImgBox-Img {
+.Slide-Inner-List-Item-Box-ImgBox-Img{
 	width: 100%;
 	transition-duration: 4s;
-	-webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .Slide-Inner-List-Item-Box.isShow .Slide-Inner-List-Item-Box-ImgBox::before{
-	-webkit-transform: scale(0, 1);
 	transform: scale(0, 1);
 }
 .Slide-Inner-List-Item-Box-ImgBox::before{
@@ -219,18 +216,12 @@ section,
 	left: 0;
 	z-index: 2;
 	background-color: #000;
-	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
-	-webkit-transform-origin: right;
 	transform-origin: right;
-	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
-	-webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
-
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -553,8 +544,8 @@ footer .copyright{
 	width: 30%;
 	margin-right: 5%;
 	margin-top: 4rem;
-	display: flex;
-	flex-direction: column;
+	/* display: flex; */
+	/* flex-direction: column; */
 }
 .top06 .box .item:nth-of-type(3n){
 	margin-right: 0;
@@ -566,7 +557,7 @@ footer .copyright{
 	background: var(--blue);
 	text-align: center;
 	padding: 2rem;
-	/* height: 100%; */
+	height: auto;
 }
 .top06 .box .item .txt h3{
 	font-size: 1.4rem;
