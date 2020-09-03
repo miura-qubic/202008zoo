@@ -23,6 +23,7 @@ a{
 	max-width: 1920px;
 	margin: 0 auto;
 	height: auto;
+	overflow: hidden;
 }
 section,
 .section{
@@ -358,21 +359,55 @@ footer .copyright{
 	position: relative;
 }
 .top01 .img{
+	position: relative;
+	width: 100%;
 	height: calc(100vh - 5rem);
 	min-height: 650px;
+	overflow: hidden;
+}
+.top01 .img img{
+	animation: anime 5.1s 0s infinite;
+	z-index: -1;
 }
 .top01 .box .txt{
 	position: absolute;
 	top: 50%;
-	left: 10%;
 	transform: translateY(-50%) translateY(-4rem);
+	z-index: 2;
+}
+.top01 .box .txt.bk{
+	color: #000;
+}
+.top01 .box .txt.left{
+	left: 10%;
+}
+.top01 .box .txt.right{
+	right: 10%;
 }
 .top01 .box .txt .logo{
 	width: 45%;
 	margin-bottom: 2.5rem;
 }
+.top01 .box .txt.right .logo{
+	margin-left: auto;
+}
 .top01 .box .txt p{
 	font-size: 1.2rem;
+}
+.top01 .box .txt.right p{
+	text-align: right;
+}
+@keyframes anime{
+	0%{
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	99%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
