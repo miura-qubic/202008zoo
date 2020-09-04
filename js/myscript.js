@@ -18,6 +18,31 @@ const tabletwidth = 1025;
 
 $(function () {
 
+	$('.slick01').slick({
+		autoplay: true,
+		arrows: false,
+		autoplaySpeed: 5000,
+		speed: 500,
+		draggable:false,
+		swipe: false,
+		fade: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		pauseOnDotsHover: false,
+	});
+
+	// $('.slick01').on('beforeChange',function(event, slick, currentSlide, nextSlide){
+	// 	console.log(nextSlide);
+	// 	if(nextSlide > 0){
+	// 		$('.slick01').slick('slickSetOption', 'autoplaySpeed', 4400, true)
+	// 	}
+	// });
+
+	// $('.slick01').on('beforeChange', function(){
+	// 	$('.slick01 .slick-slide').removeClass('is-prev');
+	// 	$('.slick01 .slick-slide.slick-active').next('.slick-slide').addClass('is-prev');
+	// });
+
 // JQueryの範囲
 	// if(pagename !== 'contact'){
 		if(w > spwidth){

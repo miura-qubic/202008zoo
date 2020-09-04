@@ -320,47 +320,52 @@ footer .copyright{
 .top01 .box{
 	position: relative;
 }
-.top01 .img{
+/* .top01 .img{
 	width: 100%;
 	height: 40vh;
 	min-height: 250px;
 	overflow: hidden;
-}
-.top01 .img img{
-	animation: anime 5s 0s infinite;
+} */
+.top01 .slick01 img.slick-slide{
+	transform: scale(1);
+	width: 100%;
+	height: 40vh;
+	min-height: 250px;
+	object-fit: cover;
 	z-index: -1;
+	outline: none;
 }
-.top01 .box .txt{
+.top01 .slick01 img.slick-slide.slick-active{
+	transform: scale(1.2);
+	animation: anime 5s 0s infinite;
+}
+.top01 .txt{
+	width: 100%;
 	position: absolute;
 	top: 50%;
+	left: 0;
 	transform: translateY(-50%);
 	padding: 1.5rem;
+	z-index: 2;
 }
-.top01 .box .txt.left{
-	left: 0;
+.top01 .txt .slick02 .slick-slide{
+	outline: none;
 }
-.top01 .box .txt.right{
-	right: 0;
-}
-.top01 .box .txt.bk{
+.top01 .txt .slick02 .bk{
 	color: #000;
 }
-.top01 .box .txt p{
+.top01 .txt .slick02 p{
 	font-size: 1.1rem;
 }
-.top01 .box .txt.right p{
+.top01 .txt .slick02 .right p{
 	text-align: right;
 }
 @keyframes anime{
 	0%{
-		opacity: 1;
-	}
-	10%{
-		opacity: 1;
 		transform: scale(1.2);
 	}
 	100%{
-		opacity: 1;
+		transform: scale(1);
 	}
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
