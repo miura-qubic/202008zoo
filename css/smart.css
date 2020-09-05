@@ -320,13 +320,65 @@ footer .copyright{
 .top01 .box{
 	position: relative;
 }
+
+.top01 #slider{
+	width: 100%;
+	height: 40vh;
+	min-height: 250px;
+	position: relative;
+}
+.top01 #slider .item{
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 100;
+	overflow: hidden;
+	transition: 1s transform 2s;
+}
+.top01 #slider .item:last-of-type::before{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	content: '';
+	background: var(--blue);
+	z-index: 100;
+}
+.top01 #slider .item.none_bg::before{
+	content: none;
+}
+.top01 #slider .item span{
+	display: block;
+	height: 40vh;
+	min-height: 250px;
+	width: 100%;
+}
+.top01 #slider .item img{
+	transform:scale(1.5);
+	display: block;
+	transition:0.5s transform 2s;
+}
+.top01 #slider .active{
+	z-index: 1000;
+}
+.top01 #slider .active img{
+	transition:5.5s cubic-bezier(0,.96,.35,.98);
+	transform:scale(1);
+	z-index: 100;
+}
+
+
+
+
 /* .top01 .img{
 	width: 100%;
 	height: 40vh;
 	min-height: 250px;
 	overflow: hidden;
 } */
-.top01 .slick01 img.slick-slide{
+/* .top01 .slick01 img.slick-slide{
 	transform: scale(1);
 	width: 100%;
 	height: 40vh;
@@ -338,17 +390,49 @@ footer .copyright{
 .top01 .slick01 img.slick-slide.slick-active{
 	transform: scale(1.2);
 	animation: anime 5s 0s infinite;
-}
+} */
 .top01 .txt{
-	width: 100%;
+	width: 55%;
 	position: absolute;
-	top: 50%;
-	left: 0;
+	/* top: 50%; */
+	/* transform: translateY(-50%); */
 	transform: translateY(-50%);
 	padding: 1.5rem;
 	z-index: 2;
 }
-.top01 .txt .slick02 .slick-slide{
+.top01 .txt.bk{
+	color: #000;
+}
+.top01 .txt.first{
+	top :50%;
+	 left: 0; 
+}
+.top01 .txt.second{
+	top :35%;
+	 right: 0; 
+}
+.top01 .txt.third{
+	top :30%;
+	 right: 0; 
+}
+.top01 .txt.fourth{
+	top :70%;
+	 left: 0; 
+}
+.top01 .txt .logo{
+	margin-bottom: 1.5rem;
+}
+.top01 #slider .txt .logo img{
+	transform: scale(1);
+}
+.top01 .txt.right .logo{
+	margin-left: auto;
+}
+.top01 .txt p{
+	font-size:0.9rem;
+	text-align: center;
+}
+/* .top01 .txt .slick02 .slick-slide{
 	outline: none;
 }
 .top01 .txt .slick02 .bk{
@@ -359,15 +443,15 @@ footer .copyright{
 }
 .top01 .txt .slick02 .right p{
 	text-align: right;
-}
-@keyframes anime{
+} */
+/* @keyframes anime{
 	0%{
 		transform: scale(1.2);
 	}
 	100%{
 		transform: scale(1);
 	}
-}
+} */
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */

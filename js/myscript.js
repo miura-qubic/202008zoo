@@ -18,18 +18,80 @@ const tabletwidth = 1025;
 
 $(function () {
 
-	$('.slick01').slick({
-		autoplay: true,
-		arrows: false,
-		autoplaySpeed: 5000,
-		speed: 500,
-		draggable:false,
-		swipe: false,
-		fade: true,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		pauseOnDotsHover: false,
-	});
+	let slide_item = $('#slider .item').length;
+	console.log(slide_item);
+
+
+	let active_number = 0;
+	let prev_number = 3;
+	let next_number = 1;
+	let slider = function () {
+
+		$('#slider .item').removeClass('active');
+		$('#slider .item').removeClass('prev');
+		$('#slider .item').removeClass('next');
+		
+		$('#slider .item').css({
+			'z-index': '-1',
+			'transform': 'translateX(0%)',
+		});
+
+		$('#slider .item').eq(prev_number).addClass('prev').css({
+			'transform': 'translateX(100%)',
+			'transition': '1s transform',
+			'z-index': '1100',
+		});
+		$('#slider .item.prev span').css({
+			'transform': 'translateX(-100%)',
+			'transition': '1s transform',
+			'z-index': '1000',
+		});
+		$('#slider .item').eq(active_number).addClass('active').css({
+			'z-index': '1000',
+		});
+		$('#slider .item').eq(next_number).addClass('next').css({
+			'transform': 'translateX(0%)',
+			'z-index': '100',
+		});
+		$('#slider .item.next span').css({
+			'transform': 'translateX(0%)',
+		});
+		
+		active_number++;
+		prev_number++;
+		next_number++;
+
+		if (active_number === slide_item) {
+			active_number = 0;
+			$('.top01 #slider .item:last-of-type').addClass('none_bg');
+		}
+		if (prev_number === slide_item) {
+			prev_number = 0;
+		}
+		if (next_number === slide_item) {
+			next_number = 0;
+		}
+
+		
+	};	
+	slider();
+	setInterval(slider, 5500);
+
+
+	
+
+	// $('.slick01').slick({
+	// 	autoplay: true,
+	// 	arrows: false,
+	// 	autoplaySpeed: 5000,
+	// 	speed: 1000,
+	// 	draggable:false,
+	// 	swipe: false,
+	// 	// fade: true,
+	// 	pauseOnFocus: false,
+	// 	pauseOnHover: false,
+	// 	pauseOnDotsHover: false,
+	// });
 
 	// $('.slick01').on('beforeChange',function(event, slick, currentSlide, nextSlide){
 	// 	console.log(nextSlide);
@@ -38,29 +100,34 @@ $(function () {
 	// 	}
 	// });
 
-	// $('.slick01').on('beforeChange', function(){
-	// 	$('.slick01 .slick-slide').removeClass('is-prev');
-	// 	$('.slick01 .slick-slide.slick-active').next('.slick-slide').addClass('is-prev');
-	// });
+	$('.slick01').on('beforeChange', function () {
+		$('.slick01 .slick-slide').removeClass('is-prev');
+		$('.slick01 .slick-slide.slick-active').addClass('is-prev');
+	});
+	$('.slick01').on('afterChange', function () {
+		// $('.slick01 .slick-slide.is-prev').attr({ 'tabindex': '3' });
+		// $('.slick01 .slick-slide.slick-active').attr({ 'tabindex': '3' });
+		// $('.slick01 .slick-slide.is-prev').attr({ 'id': 'false' });
+	});
 
-// JQueryの範囲
+	// JQueryの範囲
 	// if(pagename !== 'contact'){
-		if(w > spwidth){
-			// グローバルナビをスクロール時に固定する
-			let nav = $('.gnav');
-			let offset = nav.offset();
-			$(window).scroll(function(){
-				if($(window).scrollTop() > offset.top){
-					nav.addClass('fixed');
-					$('.top02').addClass('fixed');
-					$('.lower .gnav').addClass('active');
-				}else{
-					nav.removeClass('fixed');
-					$('.top02').removeClass('fixed');
-					$('.lower .gnav').removeClass('active');
-				}
-			});
-		}
+	if (w > spwidth) {
+		// グローバルナビをスクロール時に固定する
+		let nav = $('.gnav');
+		let offset = nav.offset();
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > offset.top) {
+				nav.addClass('fixed');
+				$('.top02').addClass('fixed');
+				$('.lower .gnav').addClass('active');
+			} else {
+				nav.removeClass('fixed');
+				$('.top02').removeClass('fixed');
+				$('.lower .gnav').removeClass('active');
+			}
+		});
+	}
 	// }
 
 	// ハンバーガーメニュークリック時
@@ -75,19 +142,19 @@ $(function () {
 	// スムーススクロール 
 	var headerHeight = $('header').outerHeight();
 	var urlHash = location.hash;
-	if(urlHash) {
+	if (urlHash) {
 		$('body,html').stop().scrollTop(0);
-		setTimeout(function(){
-				var target = $(urlHash);
-				var position = target.offset().top - headerHeight;
-				$('body,html').stop().animate({scrollTop:position}, 500);
+		setTimeout(function () {
+			var target = $(urlHash);
+			var position = target.offset().top - headerHeight;
+			$('body,html').stop().animate({ scrollTop: position }, 500);
 		}, 100);
 	}
-	$('a[href^="#"]').click(function() {
-		var href= $(this).attr("href");
+	$('a[href^="#"]').click(function () {
+		var href = $(this).attr("href");
 		var target = $(href);
 		var position = target.offset().top - headerHeight;
-		$('body,html').stop().animate({scrollTop:position}, 500);   
+		$('body,html').stop().animate({ scrollTop: position }, 500);
 	});
 
 	let navLink = $('nav.gnav li a');
@@ -116,8 +183,8 @@ $(function () {
 				navLink.removeClass('current');
 				navLink.eq(i).addClass('current');
 				i == contentsArr.length;
-			// スクロール位置がAbout Usより上になった場合、ナビゲーションからclass="current"を外す
-			}else if(contentsArr[0][0] > windowScrolltop){
+				// スクロール位置がAbout Usより上になった場合、ナビゲーションからclass="current"を外す
+			} else if (contentsArr[0][0] > windowScrolltop) {
 				navLink.removeClass('current');
 			}
 		};
@@ -136,66 +203,66 @@ $(function () {
 		});
 	});
 
-	$('.JS_ScrollItem').each(function(){
-    let $item = $(this);
-    $(window).on('scroll', function(){
-      let top = $item.offset().top; // ターゲットの位置取得
-      let position = top - $(window).height();  // イベントを発火させたい位置
-      if($(window).scrollTop() > position){
-        $item.addClass('isShow');
-      }
-    });
-  });
+	$('.JS_ScrollItem').each(function () {
+		let $item = $(this);
+		$(window).on('scroll', function () {
+			let top = $item.offset().top; // ターゲットの位置取得
+			let position = top - $(window).height();  // イベントを発火させたい位置
+			if ($(window).scrollTop() > position) {
+				$item.addClass('isShow');
+			}
+		});
+	});
 
 	// Q&A 開閉
-	$('#qa_list dt').on('click',function(){
+	$('#qa_list dt').on('click', function () {
 		$(this).next('dd').slideToggle();
 		$(this).toggleClass('open');
 
-		if($(this).hasClass('open')){
+		if ($(this).hasClass('open')) {
 			$(this).find('img').attr('src', '../images/top/icon_qaclose.png');
-		}else{
+		} else {
 			$(this).find('img').attr('src', '../images/top/icon_qaopen.png');
 		}
 	});
 
 
 	// if(pagename === 'contact'){
-		// チェックボックス
-		$("input.ichk").iCheck({
-			checkboxClass: "icheckbox_square-red"//, using theme
-		// radioClass: "iradio_square-red"
-		});
-		$("input.iradio").iCheck({
-			// checkboxClass: "icheckbox_square-red"//, using theme
-			radioClass: "iradio_square-red"
-		});
-		//Easy Select Box
-		jQuery(function () {
-			jQuery('select.eazy').easySelectBox({speed:200});
-		});
+	// チェックボックス
+	// $("input.ichk").iCheck({
+	// checkboxClass: "icheckbox_square-red"//, using theme
+	// radioClass: "iradio_square-red"
+	// });
+	// $("input.iradio").iCheck({
+	// checkboxClass: "icheckbox_square-red"//, using theme
+	// radioClass: "iradio_square-red"
+	// });
+	//Easy Select Box
+	// jQuery(function () {
+	// 	jQuery('select.eazy').easySelectBox({speed:200});
+	// });
 	// }
 
 });
 
 // Voice Q&Aのボックスの高さ揃える
-$(window).on('load resize',function(){
-	if(w > tabletwidth){
+$(window).on('load resize', function () {
+	if (w > tabletwidth) {
 		var top07_dtArr = new Array();
 		var top07_img = new Array();
 		var top07_ddArr = new Array();
-		$('.top07 .item dt').each(function(i, element){
+		$('.top07 .item dt').each(function (i, element) {
 			top07_dtArr[i] = $(this).innerHeight();
 		});
-		$('.top07 .item .img').each(function(i, element){
+		$('.top07 .item .img').each(function (i, element) {
 			top07_img[i] = $(this).innerHeight();
 		});
-		$('.top07 .item dd').each(function(i, element){
+		$('.top07 .item dd').each(function (i, element) {
 			top07_ddArr[i] = $(element).height(top07_img[i] - top07_dtArr[i]);
 		});
 	}
 
-	if(w > spwidth){
+	if (w > spwidth) {
 		var sliderImg = $('.top06 .item .txt').eq(0).innerHeight();
 		$('.top06 .item .txt').innerHeight(sliderImg);
 	}
