@@ -99,41 +99,41 @@ $(function () {
 	}
 
 	// トップページへ戻るボタン
-	$(window).scroll(function () {
-		if ($(window).scrollTop() > 500) {
-			$('.lower #top_back').fadeIn();
-		} else {
-			$('.lower #top_back').fadeOut();
-		}
-		var scrollHeight = $(document).height();
-		var scrollPosition = $(window).height() + $(window).scrollTop();
-		var footHeight = $('footer').innerHeight();
-		if ( scrollHeight - scrollPosition <= footHeight ) {
-			if(w > spwidth){
-				$('.lower #top_back').css({
-						'position': 'absolute',
-						'bottom': footHeight - 65
-				});
-			}else{
-				$('.lower #top_back').css({
-						'position': 'absolute',
-						'bottom': footHeight - 45
-				});
-			}
-		} else {
-			if(w > spwidth){
-				$('.lower #top_back').css({
-						'position': 'fixed',
-						'bottom': '4rem'
-				});
-			}else{
-					$('.lower #top_back').css({
-							'position': 'fixed',
-							'bottom': '2rem'
-					});
-			}
-		}
-	});
+	// $(window).scroll(function () {
+	// 	if ($(window).scrollTop() > 500) {
+	// 		$('.lower #top_back').fadeIn();
+	// 	} else {
+	// 		$('.lower #top_back').fadeOut();
+	// 	}
+	// 	var scrollHeight = $(document).height();
+	// 	var scrollPosition = $(window).height() + $(window).scrollTop();
+	// 	var footHeight = $('footer').innerHeight();
+	// 	if ( scrollHeight - scrollPosition <= footHeight ) {
+	// 		if(w > spwidth){
+	// 			$('.lower #top_back').css({
+	// 					'position': 'absolute',
+	// 					'bottom': footHeight - 65
+	// 			});
+	// 		}else{
+	// 			$('.lower #top_back').css({
+	// 					'position': 'absolute',
+	// 					'bottom': footHeight - 45
+	// 			});
+	// 		}
+	// 	} else {
+	// 		if(w > spwidth){
+	// 			$('.lower #top_back').css({
+	// 					'position': 'fixed',
+	// 					'bottom': '4rem'
+	// 			});
+	// 		}else{
+	// 				$('.lower #top_back').css({
+	// 						'position': 'fixed',
+	// 						'bottom': '2rem'
+	// 				});
+	// 		}
+	// 	}
+	// });
 
 	// ハンバーガーメニュークリック時
 	$('.menu_open').click(function () {
@@ -225,9 +225,9 @@ $(function () {
 		$(this).toggleClass('open');
 
 		if ($(this).hasClass('open')) {
-			$(this).find('img').attr('src', '../images/top/icon_qaclose.png');
+			$(this).find('img').attr('src', './images/top/icon_qaclose.png');
 		} else {
-			$(this).find('img').attr('src', '../images/top/icon_qaopen.png');
+			$(this).find('img').attr('src', './images/top/icon_qaopen.png');
 		}
 	});
 

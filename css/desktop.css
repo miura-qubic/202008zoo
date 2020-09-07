@@ -492,7 +492,9 @@ footer .copyright{
 }
 .top03 article a{
 	display: flex;
-	padding: 0.8rem 0;
+	align-content: center;
+	padding: 0.25rem 0.5rem;
+	margin: 0 0 1.5rem;
 	border-bottom: solid 1px #ff0000;
 	font-size: 0.9rem;
 	transition: .3s;

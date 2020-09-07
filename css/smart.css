@@ -294,6 +294,7 @@ header .gnav_sp ul li a{
 footer{
 	padding: 3rem 0 2rem;
 	border-top: solid 10px var(--blue);
+	position: relative;
 	color: #010c4f;
 }
 footer img{
@@ -462,7 +463,8 @@ footer .copyright{
 }
 .top03 article a{
 	font-size: 0.9rem;
-	padding: 1rem 0;
+	padding: 0.5rem 0;
+	margin:0 0 1rem;
 	border-bottom: solid 1px #ff0000;
 }
 .top03 article a time{
@@ -537,7 +539,7 @@ footer .copyright{
 	color: #d20e38;
 	font-size: 0.8rem;
 	font-weight: normal;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	text-align: center;
 	line-height: 1.6;
 }
@@ -549,7 +551,7 @@ footer .copyright{
 }
 .top05 .box .item .txt .num{
 	position: relative;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	margin-bottom: 1.5rem;
 	text-align: center;
 	line-height: 1;
@@ -778,14 +780,13 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 #top_back{
-	display: none;
-	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
-	width: 7rem;
-	height: 7rem;
+	position: absolute;
+	top: 0;
+	right: 1rem;
+	width: 5.5rem;
+	height: 5.5rem;
 	border: solid 1px #fff;
-	transform: rotate(45deg);
+	transform: translateY(-50%) rotate(45deg);
 	background: #d00e36;
 }
 #top_back a{
@@ -794,6 +795,7 @@ footer .copyright{
 	left: 50%;
 	width: 100%;
 	text-align: center;
+	white-space: nowrap;
 	font-size: 0.7rem;
 	font-weight: bold;
 	letter-spacing: 0.15rem;
@@ -803,6 +805,7 @@ footer .copyright{
 #top_back a span{
 	display: block;
 	margin-top: 1rem;
+	margin: 0.5rem 0 -2rem;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
