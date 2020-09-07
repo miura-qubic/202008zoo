@@ -23,9 +23,9 @@
 
 <body>
 	<div id="wrapper" class="lower">
-		<header>
+		<!-- <header> -->
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ PCナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<nav class="gnav is_pc">
+			<!-- <nav class="gnav is_pc">
 				<div class="container">
 					<ul>
 						<li><a href="./#about">About Us</a></li>
@@ -39,11 +39,11 @@
 						<li><a href="./#contact">Contact</a></li>
 					</ul>
 				</div>
-			</nav>
+			</nav> -->
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ PCナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ SPナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<a href="./" class="is_sp">
+			<!-- <a href="./" class="is_sp">
 				<h1 class="logo"><img src="./images/common/logo.png" alt="Nail Printer Zoo"></h1>
 			</a>
 
@@ -59,16 +59,16 @@
 					<li><a href="./#qa">Q&A</a></li>
 					<li><a href="./#contact">Contact</a></li>
 				</ul>
-			</nav>
+			</nav> -->
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ SPナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
-			<div class="menu_open is_sp" id="menu_open">
+			<!-- <div class="menu_open is_sp" id="menu_open">
 				<span></span>
 				<span></span>
 				<span></span>
 			</div>
 			
-		</header>
+		</header> -->
 		<main>
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ contact01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 			<section class="contact01">
@@ -81,7 +81,8 @@
 						<p>下記フォームに必要事項を入力の上、ご送信ください。<br class="is_pc">担当スタッフより折り返しご連絡させていただきます。</p>
 						<h2>基本情報・ご連絡先</h2>
 						<dl class="form">
-							<dd class="wide nobd">※オンライン体験会に参加される方のお名前でご入力ください。</dd>
+							<dd class="wide nobd notice">※オンライン体験会に参加される方のお名前でご入力ください。</dd>
+							<dd class="wide nobd"><span class="red">*</span>は必須項目です。</dd>
 
 							<dt>体験会の参加を希望される商品<br>複数選択可<span class="red">*</span></dt>
 							<div class="txtbox txtbox1 shortbox">
@@ -110,8 +111,8 @@
 								<input type="text" name="user_kana" id="user_kana" required>
 							</dd>
 
-							<dt class="chk-dt fadein">ご職業<span class="red">*</span></dt>
-							<dd class="chk-box job-box fadein">
+							<dt class="chk-dt">ご職業<span class="red">*</span></dt>
+							<dd class="chk-box job-box">
 								<div>
 									<input type="radio" name="job" id="j0" value="ネイルサロン経営者" class="iradio" checked>
 									<label for="j0">ネイルサロン経営者</label>
@@ -146,59 +147,59 @@
 								</div>
 							</dd>
 
-							<dt class="fadein">会社名・サロン名<span class="red">*</span></dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>会社名・サロン名<span class="red">*</span></dt>
+							<dd class="txtbox txtbox1">
 								<input type="text" name="comp_name" id="comp_name" required>
 							</dd>
 
-							<dt class="fadein">代表者のお名前（漢字）</dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>代表者のお名前（漢字）</dt>
+							<dd class="txtbox txtbox1">
 								<input type="text" name="dele" id="dele">
 							</dd>
 
-							<dt class="fadein">郵便番号<span class="red">*</span></dt>
-							<dd class="txtbox txtbox1 shortbox fadein">
+							<dt>郵便番号<span class="red">*</span></dt>
+							<dd class="txtbox txtbox1 shortbox">
 								<input type="text" name="zip11" id="zip11" maxlength="8" onKeyUp="$('#zip11').zip2addr('#addr11');"
 									required>
 							</dd>
 
-							<dt class="fadein">都道府県市町村<span class="red">*</span></dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>都道府県市町村<span class="red">*</span></dt>
+							<dd class="txtbox txtbox1">
 								<input type="text" name="addr11" id="addr11" required>
 							</dd>
 
-							<dt class="fadein">番地・マンション名</dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>番地・マンション名</dt>
+							<dd class="txtbox txtbox1">
 								<input type="text" name="address_num" id="address_num">
 							</dd>
 
-							<dt class="fadein">電話番号<span class="red">*</span></dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>電話番号<span class="red">*</span></dt>
+							<dd class="txtbox txtbox1">
 								<input type="tel" name="tel" id="tel" required>
 							</dd>
 
-							<dt class="fadein">携帯番号</dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>携帯番号</dt>
+							<dd class="txtbox txtbox1">
 								<input type="tel" name="phone" id="phone">
 							</dd>
 
-							<dt class="fadein">FAX番号</dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>FAX番号</dt>
+							<dd class="txtbox txtbox1">
 								<input type="tel" name="fax" id="fax">
 							</dd>
 
-							<dt class="fadein">メールアドレス<span class="red">*</span></dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>メールアドレス<span class="red">*</span></dt>
+							<dd class="txtbox txtbox1">
 								<input type="email" name="email" id="email" required>
 							</dd>
 
 
 
-							<h2 class="fadein">ご予約内容・アンケート</h2>
-							<p class="fadein">ご購入時にスムーズにご案内できるよう、アンケートへのご協力をお願いします。</p>
+							<h2>ご予約内容・アンケート</h2>
+							<p>ご購入時にスムーズにご案内できるよう、アンケートへのご協力をお願いします。</p>
 
-							<dt class="fadein">日時<span class="red">*</span></dt>
-							<dd class="txtbox txtbox1 fadein">
+							<dt>日時<span class="red">*</span></dt>
+							<dd class="txtbox txtbox1">
 								<div class="select">
 									<label for="date01">第1希望</label>
 									<input type="date" name="" id="">
@@ -233,23 +234,23 @@
 
 							</dd>
 
-							<dt class="fadein">参加予定人数（上限４人）<span class="red">*</span></dt>
-							<dd class="txtbox txtbox1 shortbox fadein">
+							<dt>参加予定人数（上限４人）<span class="red">*</span></dt>
+							<dd class="txtbox txtbox1 shortbox">
 								<input type="number" name="num_people" id="num_people" min="1" max="4" class="num_people" required>
 								<label for="num_people">人</label>
 							</dd>
 
-							<dt class="full fadein">体験会に参加するきっかけは何ですか。</dt>
-							<dd class="txtbox txtbox2 fadein">
+							<dt class="full">体験会に参加するきっかけは何ですか。</dt>
+							<dd class="txtbox txtbox2">
 								<textarea name="msg" id="msg"></textarea>
 							</dd>
-							<dt class="fadein">ご購入予定はいつ頃ですか？</dt>
-							<dd class="txtbox txtbox1 shortbox fadein">
+							<dt>ご購入予定はいつ頃ですか？</dt>
+							<dd class="txtbox txtbox1 shortbox">
 								<input type="text" name="planning" id="planning" class="planning">
 							</dd>
 						</dl>
 
-						<div class="agreement_box fadein">
+						<div class="agreement_box">
 							<!-- <div class="inner">
 
 								<input type="checkbox" name="agree01" id="j10" value="チェック済み" class="ichk" required>
@@ -280,10 +281,10 @@
 							</div>
 						</div>
 
-						<input type="submit" class="submit_btn fadein" value="送信する">
+						<input type="submit" class="submit_btn" value="送信する">
 					</form>
 
-					<div class="privacypolicy fadein">
+					<div class="privacypolicy">
 						<h2>プライバシーポリシー</h2>
 						<p>TREE COMPANY 株式会社（以下、｢当社｣といいます。）は、お客様が安心して当社WEBサイトをご利用頂けるよう、プライバシーポリシー（個人情報保護に関する基本方針）を定め個人情報保護に取り組んでいます。
 						</p>
@@ -347,7 +348,7 @@
 		</main>
 		<footer>
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<div class="s_container fadein">
+			<div class="s_container">
 				<div class="box">
 					<div class="leftbox">
 						<div class="logo">
@@ -375,6 +376,15 @@
 			</div>
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 		</footer>
+
+		<div id="top_back" class="gothic">
+			<a href="./">
+				トップページへ<br>
+				<span>＞</span>
+			</a>
+		</div>
+
+		<input type="hidden" name="" id="pagename" value="lower">
 	</div>
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js" defer></script>
 	<script src="./js/ofi.min.js" defer></script>
