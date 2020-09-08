@@ -1308,3 +1308,78 @@ footer .copyright{
 	list-style: decimal inside;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ salonlist01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ topics01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.topics01{
+	background: #696969;
+	text-align: center;
+	padding: 5rem 0 10rem;
+}
+.topics01 .box{
+	margin-top: 6rem;
+	display: flex;
+	align-items: flex-start;
+}
+.topics01 .box .cat_box{
+	position: relative;
+	background: var(--blue);
+	min-width: 180px;
+	width: 20%;
+	height: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.topics01 .box .cat_box::after{
+	position: absolute;
+	content: '';
+	top: 50%;
+	right: -1.5rem;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0.75rem 0 0.75rem 1.5rem;
+	border-color: transparent transparent transparent var(--blue);
+}
+.topics01 .box .cat_box p{
+	font-size: 1.6rem;
+}
+.topics01 .box .cat_box p.ttl{
+	position: relative;
+	font-size: 1.1rem;
+	font-style: italic;
+	margin-bottom: 1rem;
+}
+.topics01 .box .cat_box p.ttl::after{
+	position: absolute;
+	content: '';
+	width: 1rem;
+	height: 3px;
+	background: #fff;
+	bottom: -0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.topics01 .box .topics_box{
+	background: #fff;
+	width: 80%;
+	text-align: left;
+	padding: 3.5rem;
+}
+.topics01 .box .topics_box h2{
+	font-size: 1.4rem;
+	color: var(--blue);
+}
+.topics01 .box .topics_box time{
+	display: block;
+	color: var(--blue);
+	margin-bottom: 2.5rem;
+	font-size: 1.2rem;
+}
+.topics01 .box .topics_box p{
+	color: #000;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ topics01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
