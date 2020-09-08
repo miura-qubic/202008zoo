@@ -6,7 +6,7 @@ const spwidth = 767;
 const tabletwidth = 1025;
 const pagename = document.getElementById("pagename").value;
 {
-	if(pagename ===  'top'){
+	if(pagename ===  'top' || pagename === 'lower02'){
 		const openMenu = document.getElementById('menu_open');
 		const Nav = document.querySelector('header nav');
 	
@@ -79,7 +79,7 @@ $(function () {
 	setInterval(slider, 5500);
 
 	// JQueryの範囲
-	if(pagename === 'top'){
+	if(pagename === 'top' || pagename === 'lower02'){
 		if (w > spwidth) {
 			// グローバルナビをスクロール時に固定する
 			let nav = $('.gnav');

@@ -105,6 +105,19 @@ section,
 	transform : translateY(100px);
 	transition : .6s .3s;
 }
+.lower .ttl_wrap .ttl::before,
+.lower .ttl_wrap .ttl::after,
+.lower02 .ttl_wrap .ttl::before,
+.lower02 .ttl_wrap .ttl::after{
+	content: '';
+	display: inline-block;
+	width: 3.5rem;
+	height: 3.5rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) translateY(0.5rem);
+	opacity : 1;
+}
 .ttl_wrap .ttl.active::before,
 .ttl_wrap .ttl.active::after{
 	top: 50%;
@@ -1057,6 +1070,105 @@ footer .copyright{
 	margin: 1rem 0;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ privacy01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ salonlist01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.salonlist01{
+	background: #696969;
+	text-align: center;
+	padding: 2.5rem 0 4.5rem;
+}
+.salonlist01 .box{
+	margin-top: 3rem;
+}
+.salonlist01 .box .txt{
+	display: inline-block;
+	text-align: left;
+	margin: 0 auto;
+}
+.salonlist01 .box .txt h2{
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+.salonlist01 .box ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 2.5rem 0;
+}
+.salonlist01 .box ul li{
+	width: 25%;
+	border-right: solid 1px #fff;
+}
+.salonlist01 .box ul li:nth-of-type(4),
+.salonlist01 .box ul li:last-of-type{
+	border-right: none;
+}
+.salonlist01 .box ul li:nth-of-type(n+5){
+	margin-top: 1rem;
+}
+.salonlist01 .box ul li a{
+	text-decoration: underline;
+	white-space: nowrap;
+	line-height: 1.2;
+}
+.salonlist01 .list{
+	margin-top: 3rem;
+}
+.salonlist01 .list .item{
+	margin-top: 2.5rem;
+}
+.salonlist01 .list .item:first-of-type{
+	margin-top: 0;
+}
+.salonlist01 .list .item h3{
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+.salonlist01 .list .item table{
+	width: 100%;
+}
+.salonlist01 .list .item tr{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+.salonlist01 .list .item tr:first-of-type{
+	margin-top: 0;
+}
+.salonlist01 .list .item th,
+.salonlist01 .list .item td{
+	display: block;
+	padding: 0.25rem 0;
+	text-align: left;
+}
+.salonlist01 .list .item th{
+	width: 100%;
+	border-bottom: solid 1px #fb0202;
+}
+.salonlist01 .list .item td{
+	width: 70%;
+}
+.salonlist01 .list .item td.pref{
+	width: 30%;
+	padding: 0.1rem 1rem;
+}
+.salonlist01 .box02{
+	margin-top: 3rem;
+	border: solid 1px #fb0202;
+	padding: 1.5rem;
+	text-align: left;
+}
+.salonlist01 .box02 p a{
+	display: inline;
+	text-decoration: underline;
+}
+.salonlist01 .box02 ol{
+	margin-top: 1rem;
+}
+.salonlist01 .box02 ol li{
+	list-style: decimal inside;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ salonlist01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 @media screen and (orientation:portrait) {/* 縦向き */}
 @media screen and (orientation:landscape) {/* 横向き */}

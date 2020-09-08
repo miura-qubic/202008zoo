@@ -118,6 +118,19 @@ section,
 	transform : translateY(100px);
 	transition : .6s .3s;
 }
+.lower .ttl_wrap .ttl::before,
+.lower .ttl_wrap .ttl::after,
+.lower02 .ttl_wrap .ttl::before,
+.lower02 .ttl_wrap .ttl::after{
+	content: '';
+	display: inline-block;
+	width: 7rem;
+	height: 7rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) translateY(0.5rem);
+	opacity : 1;
+}
 .ttl_wrap .ttl.active::before,
 .ttl_wrap .ttl.active::after{
 	top: 50%;
@@ -306,6 +319,7 @@ section,
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 footer{
+	position: relative;
 	padding: 6rem 0 4rem;
 	border-top: solid 10px var(--blue);
 	color: #010c4f;
@@ -886,14 +900,13 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 #top_back{
-	display: none;
-	position: fixed;
-	bottom: 4rem;
-	right: 4rem;
-	width: 9rem;
-	height: 9rem;
+	position: absolute;
+	top: 0;
+	right: 3rem;
+	width: 8rem;
+	height: 8rem;
 	border: solid 1px #fff;
-	transform: rotate(45deg);
+	transform: translateY(-50%) rotate(45deg);
 	background: #d00e36;
 }
 #top_back:hover{
@@ -914,6 +927,7 @@ footer .copyright{
 #top_back a span{
 	display: block;
 	margin-top: 1rem;
+	margin: 0.5rem 0 -1.5rem;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -1197,3 +1211,100 @@ footer .copyright{
 	margin: 1rem 0;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ privacy01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ salonlist01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.salonlist01{
+	background: #696969;
+	text-align: center;
+	padding: 5rem 0 10rem;
+}
+.salonlist01 .box{
+	max-width: 900px;
+	width: 100%;
+	margin: 6rem auto 0;
+}
+.salonlist01 .box .txt{
+	display: inline-block;
+	text-align: left;
+	margin: 0 auto;
+}
+.salonlist01 .box .txt h2{
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+}
+.salonlist01 .box .txt p{
+	font-size: 0.9rem;
+}
+.salonlist01 .box ul{
+	display: flex;
+	justify-content: center;
+	margin: 2.5rem 0;
+}
+.salonlist01 .box ul li{
+	border-right: solid 1px #fff;
+}
+.salonlist01 .box ul li:last-of-type{
+	border-right: none;
+}
+.salonlist01 .box ul li a{
+	text-decoration: underline;
+	white-space: nowrap;
+	line-height: 1.2;
+	padding: 0 1.5rem;
+	transition: .3s;
+}
+.salonlist01 .box ul li a:hover{
+	color: #d00e36;
+}
+.salonlist01 .list{
+	margin-top: 6rem;
+}
+.salonlist01 .list .item{
+	margin-top: 4rem;
+}
+.salonlist01 .list .item:first-of-type{
+	margin-top: 0;
+}
+.salonlist01 .list .item h3{
+	font-size: 1.3rem;
+	margin-bottom: 0.5rem;
+}
+.salonlist01 .list .item table{
+	width: 100%;
+}
+.salonlist01 .list .item th,
+.salonlist01 .list .item td{
+	padding: 0.7rem 0;
+}
+.salonlist01 .list .item th{
+	display: flex;
+	width: 100%;
+	text-align: left;
+	border-bottom: solid 1px #fb0202;
+}
+.salonlist01 .list .item th span{
+	display: inline-block;
+	margin-left: auto;
+}
+.salonlist01 .list .item td{
+	width: 25%;
+	border-bottom: dotted 1px #fff;
+	border-left: solid 15px #696969;
+}
+.salonlist01 .box02{
+	margin-top: 6rem;
+	border: solid 1px #fb0202;
+	padding: 1.5rem 3rem;
+	text-align: left;
+}
+.salonlist01 .box02 p a{
+	display: inline;
+	text-decoration: underline;
+}
+.salonlist01 .box02 ol{
+	margin-top: 1rem;
+}
+.salonlist01 .box02 ol li{
+	list-style: decimal inside;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ salonlist01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
