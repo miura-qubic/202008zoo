@@ -80,6 +80,7 @@ section,
 	-webkit-line-clamp: 2;
 	overflow: hidden;
 }
+.preload * { transition: none !important; }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ベース設定 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -183,9 +184,9 @@ section,
 .fadein02{ transition: .7s; }
 .fadein03{ transition: .7s .2s; }
 .fadein04{ transition: .7s .4s; }
-.fadein05{ transition: .7s .6s; }
-.fadein06{ transition: .7s .8s; }
-.fadein07{ transition: .7s 1s; }
+.fadein05{ transition: .7s; }
+.fadein06{ transition: .7s .2s; }
+.fadein07{ transition: .7s .4s; }
 .fadein_left{
 	opacity : 0.01;
 	transform : translate(-800px, 0);

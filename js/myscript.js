@@ -6,10 +6,10 @@ const spwidth = 767;
 const tabletwidth = 1025;
 const pagename = document.getElementById("pagename").value;
 {
-	if(pagename ===  'top' || pagename === 'lower02'){
+	if (pagename === 'top' || pagename === 'lower02') {
 		const openMenu = document.getElementById('menu_open');
 		const Nav = document.querySelector('header nav');
-	
+
 		openMenu.addEventListener('click', function () {
 			openMenu.classList.toggle('active');
 			Nav.classList.toggle('active');
@@ -19,10 +19,10 @@ const pagename = document.getElementById("pagename").value;
 
 
 $(function () {
-
+	$("body").removeClass("preload");
+	
+	// スライダー
 	let slide_item = $('#slider .item').length;
-
-
 	let active_number = 0;
 	let prev_number = 3;
 	let next_number = 1;
@@ -31,7 +31,7 @@ $(function () {
 		$('#slider .item').removeClass('active');
 		$('#slider .item').removeClass('prev');
 		$('#slider .item').removeClass('next');
-		
+
 		$('#slider .item').css({
 			'z-index': '-1',
 			'transform': 'translateX(0%)',
@@ -57,7 +57,7 @@ $(function () {
 		$('#slider .item.next span').css({
 			'transform': 'translateX(0%)',
 		});
-		
+
 		active_number++;
 		prev_number++;
 		next_number++;
@@ -73,13 +73,14 @@ $(function () {
 			next_number = 0;
 		}
 
-		
-	};	
+
+	};
 	slider();
 	setInterval(slider, 5500);
+	// スライダー
 
 	// JQueryの範囲
-	if(pagename === 'top' || pagename === 'lower02'){
+	if (pagename === 'top' || pagename === 'lower02') {
 		if (w > spwidth) {
 			// グローバルナビをスクロール時に固定する
 			let nav = $('.gnav');
@@ -98,42 +99,6 @@ $(function () {
 		}
 	}
 
-	// トップページへ戻るボタン
-	// $(window).scroll(function () {
-	// 	if ($(window).scrollTop() > 500) {
-	// 		$('.lower #top_back').fadeIn();
-	// 	} else {
-	// 		$('.lower #top_back').fadeOut();
-	// 	}
-	// 	var scrollHeight = $(document).height();
-	// 	var scrollPosition = $(window).height() + $(window).scrollTop();
-	// 	var footHeight = $('footer').innerHeight();
-	// 	if ( scrollHeight - scrollPosition <= footHeight ) {
-	// 		if(w > spwidth){
-	// 			$('.lower #top_back').css({
-	// 					'position': 'absolute',
-	// 					'bottom': footHeight - 65
-	// 			});
-	// 		}else{
-	// 			$('.lower #top_back').css({
-	// 					'position': 'absolute',
-	// 					'bottom': footHeight - 45
-	// 			});
-	// 		}
-	// 	} else {
-	// 		if(w > spwidth){
-	// 			$('.lower #top_back').css({
-	// 					'position': 'fixed',
-	// 					'bottom': '4rem'
-	// 			});
-	// 		}else{
-	// 				$('.lower #top_back').css({
-	// 						'position': 'fixed',
-	// 						'bottom': '2rem'
-	// 				});
-	// 		}
-	// 	}
-	// });
 
 	// ハンバーガーメニュークリック時
 	$('.menu_open').click(function () {
@@ -202,7 +167,7 @@ $(function () {
 			var position = $(this).offset().top;
 			var scroll = $(window).scrollTop();
 			var windowHeight = $(window).height();
-			if (scroll > position - windowHeight + 100) {
+			if (scroll > position - windowHeight - 100) {
 				$(this).addClass('active');
 			}
 		});
@@ -232,7 +197,7 @@ $(function () {
 	});
 
 
-	if(pagename === 'lower'){
+	if (pagename === 'lower') {
 		// チェックボックス
 		$("input.ichk").iCheck({
 			checkboxClass: "icheckbox_square-red", // using theme
@@ -263,10 +228,10 @@ $(window).on('load resize', function () {
 		});
 	}
 
-		var arrH = [];
-		$('.top06 .item .txt').each(function(i, elem){
-			arrH[i] = $(this).innerHeight();
-		});
-		var maxH = Math.max.apply(null, arrH);
-		$('.top06 .item .txt').innerHeight(maxH);
+	var arrH = [];
+	$('.top06 .item .txt').each(function (i, elem) {
+		arrH[i] = $(this).innerHeight();
+	});
+	var maxH = Math.max.apply(null, arrH);
+	$('.top06 .item .txt').innerHeight(maxH);
 });
