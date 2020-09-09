@@ -802,7 +802,12 @@ footer .copyright{
 	transform: translateY(-50%) rotate(45deg);
 	background: #d00e36;
 }
-#top_back a{
+#top_back.close{
+	left: 50%;
+	right: unset;
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+#top_back p{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -815,7 +820,7 @@ footer .copyright{
 	line-height: 1.6;
 	transform: translate(-50%,-50%) rotate(-45deg);
 }
-#top_back a span{
+#top_back p span{
 	display: block;
 	margin-top: 1rem;
 	margin: 0.5rem 0 -1.5rem;
@@ -824,7 +829,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ contact01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .contact01{
-	background: #696969;
+	background: #585858;
 	text-align: center;
 	padding: 2.5rem 0 3.5rem;
 }
@@ -1049,7 +1054,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ privacy01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .privacy01{
-	background: #696969;
+	background: #585858;
 	padding: 2.5rem 0;
 }
 .privacy01 .box{
@@ -1073,7 +1078,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ salonlist01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .salonlist01{
-	background: #696969;
+	background: #585858;
 	text-align: center;
 	padding: 2.5rem 0 4.5rem;
 }
@@ -1122,7 +1127,7 @@ footer .copyright{
 }
 .salonlist01 .list .item h3{
 	font-size: 1.25rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.75rem;
 }
 .salonlist01 .list .item table{
 	width: 100%;
@@ -1130,7 +1135,8 @@ footer .copyright{
 .salonlist01 .list .item tr{
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 1rem;
+	margin-top: 1.25rem;
+
 }
 .salonlist01 .list .item tr:first-of-type{
 	margin-top: 0;
@@ -1139,22 +1145,24 @@ footer .copyright{
 .salonlist01 .list .item td{
 	display: block;
 	padding: 0.25rem 0;
-	text-align: left;
+	text-align: center;
+	color: #000;
+	background: #fff;
 }
 .salonlist01 .list .item th{
 	width: 100%;
-	border-bottom: solid 1px #fb0202;
+	border-bottom: solid 1px #d20e38;
 }
 .salonlist01 .list .item td{
-	width: 70%;
+	width: 50%;
 }
 .salonlist01 .list .item td.pref{
-	width: 30%;
-	padding: 0.1rem 1rem;
+	color: #fff;
+	background: #d20e38;
 }
 .salonlist01 .box02{
 	margin-top: 3rem;
-	border: solid 1px #fb0202;
+	border: solid 1px #d20e38;
 	padding: 1.5rem;
 	text-align: left;
 }
@@ -1172,7 +1180,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ topics01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .topics01{
-	background: #696969;
+	background: #585858;
 	text-align: center;
 	padding: 2.5rem 0 4rem;
 }

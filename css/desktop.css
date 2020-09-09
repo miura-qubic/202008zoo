@@ -909,10 +909,15 @@ footer .copyright{
 	transform: translateY(-50%) rotate(45deg);
 	background: #d00e36;
 }
+#top_back.close{
+	left: 50%;
+	right: unset;
+	transform: translate(-50%,-50%) rotate(45deg);
+}
 #top_back:hover{
 	animation: flash 1s;
 }
-#top_back a{
+#top_back p{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -924,7 +929,7 @@ footer .copyright{
 	line-height: 1.6;
 	transform: translate(-50%,-50%) rotate(-45deg);
 }
-#top_back a span{
+#top_back p span{
 	display: block;
 	margin-top: 1rem;
 	margin: 0.5rem 0 -1.5rem;
@@ -933,7 +938,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ contact01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .contact01{
-	background: #696969;
+	background: #585858;
 	text-align: center;
 	padding: 5rem 0;
 }
@@ -1189,7 +1194,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ privacy01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .privacy01{
-	background: #696969;
+	background: #585858;
 	padding: 5rem 0;
 }
 .privacy01 .box{
@@ -1214,7 +1219,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ salonlist01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .salonlist01{
-	background: #696969;
+	background: #585858;
 	text-align: center;
 	padding: 5rem 0 10rem;
 }
@@ -1254,7 +1259,7 @@ footer .copyright{
 	transition: .3s;
 }
 .salonlist01 .box ul li a:hover{
-	color: #d00e36;
+	color: #fb0202;
 }
 .salonlist01 .list{
 	margin-top: 6rem;
@@ -1274,26 +1279,31 @@ footer .copyright{
 }
 .salonlist01 .list .item th,
 .salonlist01 .list .item td{
-	padding: 0.7rem 0;
+	padding: 0.25rem 0;
 }
 .salonlist01 .list .item th{
-	display: flex;
-	width: 100%;
+	width: 64%;
 	text-align: left;
-	border-bottom: solid 1px #fb0202;
+	border-bottom: solid 1px #d20e38;
 }
 .salonlist01 .list .item th span{
 	display: inline-block;
 	margin-left: auto;
 }
 .salonlist01 .list .item td{
-	width: 25%;
+	width: 23%;
 	border-bottom: dotted 1px #fff;
-	border-left: solid 15px #696969;
+	border-left: solid 15px #585858;
+}
+.salonlist01 .list .item td.pref{
+	width: 13%;
+	text-align: right;
+	border-bottom: solid 1px #d20e38;
+	border-left: none!important;
 }
 .salonlist01 .box02{
 	margin-top: 6rem;
-	border: solid 1px #fb0202;
+	border: solid 1px #d20e38;
 	padding: 1.5rem 3rem;
 	text-align: left;
 }
@@ -1311,7 +1321,7 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ topics01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .topics01{
-	background: #696969;
+	background: #585858;
 	text-align: center;
 	padding: 5rem 0 10rem;
 }
