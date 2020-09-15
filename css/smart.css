@@ -1037,6 +1037,28 @@ footer .copyright{
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ contact01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ thanks01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.thanks01{
+	background: #585858;
+	text-align: center;
+	padding: 2.5rem 0 6rem;
+}
+.thanks01 .logo{
+	width: 15rem;
+	margin: 0 auto 4rem;
+}
+.thanks01 h2{
+	font-size: 1.25rem;
+}
+.thanks01 h3{
+	font-size: 1.1rem;
+	margin-top: 2rem;
+}
+.thanks01 p{
+	margin-top: 2rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ thanks01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ プライバシーポリシー コピーライト ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .privacypolicy{
 	width: 100%;
