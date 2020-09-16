@@ -40,8 +40,8 @@ $user_kana = mb_convert_kana($user_kana,"sKV");      //「名前」半角カナ�
 //管理者受信用メール送信処理
 function funcManagerAddress($item_type_1,$item_type_2,$item_type_3,$user,$user_kana,$job,$comp_name,$dele,$zip,$address,$address_num,$tel,$phone,$fax,$email,$date01,$date02,$time01,$time02,$num_people,$msg,$planning,$agree01,$agree02){
 
-    // $mailto = 'info@tree-co.net,tsukiyama@tree-co.net'; 
-    $mailto = 'miura@qu-bic.jp'; 
+    $mailto = 'info@tree-co.net,tsukiyama@tree-co.net'; 
+    // $mailto = 'miura@qu-bic.jp'; 
     // $mailto = 'register@qu-bic.jp'; 
     $subject = "オンライン体験会予約申込メール"; 
 
@@ -183,8 +183,8 @@ function funcContactAddress($item_type_1,$item_type_2,$item_type_3,$user,$user_k
     $content .= "--------------------------------\n";
 
 
-    // $mailfrom="From:" .mb_encode_mimeheader("TREE COMPANY オンライン体験会予約") ."<'info@tree-co.net'>";
-    $mailfrom="From:" .mb_encode_mimeheader("TREE COMPANY オンライン体験会予約") ."<'miura@qu-bic.jp'>";
+    $mailfrom="From:" .mb_encode_mimeheader("TREE COMPANY オンライン体験会予約") ."<'info@tree-co.net'>";
+    // $mailfrom="From:" .mb_encode_mimeheader("TREE COMPANY オンライン体験会予約") ."<'miura@qu-bic.jp'>";
 
     if(mb_send_mail($mailto,$subject,$content,$mailfrom) == true){
         $contactFlag = "○";

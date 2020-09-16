@@ -23,8 +23,8 @@ $user_kana = mb_convert_kana($user_kana,"sKV");      //「名前」半角カナ�
 //管理者受信用メール送信処理
 function funcManagerAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg){
 
-    // $mailto = 'info@tree-co.net,tsukiyama@tree-co.net'; 
-    $mailto = 'miura@qu-bic.jp'; 
+    $mailto = 'info@tree-co.net,tsukiyama@tree-co.net'; 
+    // $mailto = 'miura@qu-bic.jp'; 
     // $mailto = 'register@qu-bic.jp'; 
     $subject = "お問い合わせメール"; 
 
@@ -98,8 +98,8 @@ function funcContactAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg)
     $content .= "--------------------------------\n";
 
 
-    // $mailfrom="From:" .mb_encode_mimeheader("TREE COMPANY Nail Printer Zoo") ."<'info@tree-co.net'>";
-    $mailfrom="From:" .mb_encode_mimeheader("TREE COMPANY Nail Printer Zoo") ."<'miura@qu-bic.jp'>";
+    $mailfrom="From:" .mb_encode_mimeheader("TREE COMPANY Nail Printer Zoo") ."<'info@tree-co.net'>";
+    // $mailfrom="From:" .mb_encode_mimeheader("TREE COMPANY Nail Printer Zoo") ."<'miura@qu-bic.jp'>";
 
     if(mb_send_mail($mailto,$subject,$content,$mailfrom) == true){
         $contactFlag = "○";
