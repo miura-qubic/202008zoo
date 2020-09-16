@@ -269,7 +269,7 @@ section,
 }
 .gnav{
 	width: 100%;
-	background: var(--blue);
+	background: #0c4562;
 	font-style: italic;
 	text-align: center;
 }
@@ -322,7 +322,7 @@ section,
 footer{
 	position: relative;
 	padding: 6rem 0 4rem;
-	border-top: solid 10px var(--blue);
+	border-top: solid 10px #0c4562;
 	color: #010c4f;
 }
 footer img{
@@ -414,7 +414,7 @@ footer .copyright{
 	height: 100%;
 	display: block;
 	content: '';
-	background: var(--blue);
+	background: #0c4562;
 	z-index: 100;
 }
 .top01 #slider .item.none_bg::before{
@@ -659,7 +659,7 @@ footer .copyright{
 	margin-top: 0;
 }
 .top06 .box .item .txt{
-	background: var(--blue);
+	background: #0c4562;
 	text-align: center;
 	padding: 2rem;
 	height: auto;
@@ -731,7 +731,7 @@ footer .copyright{
 }
 .top07 .box .item .txt dt{
 	position: relative;
-	background: var(--blue);
+	background: #0c4562;
 	padding: 1rem 2rem 1rem 7rem;
 	height: 8rem;
 	display: flex;
@@ -739,7 +739,7 @@ footer .copyright{
 }
 .top07 .box .item .txt dd{
 	position: relative;
-	color: var(--blue);
+	color: #0c4562;
 	background: #d9d7d7;
 	padding: 0 2rem 0 7rem;
 	height: 100%;
@@ -1376,7 +1376,7 @@ footer .copyright{
 }
 .topics01 .box .cat_box{
 	position: relative;
-	background: var(--blue);
+	background: #0c4562;
 	min-width: 180px;
 	width: 20%;
 	height: 180px;
@@ -1396,7 +1396,7 @@ footer .copyright{
 	height: 0;
 	border-style: solid;
 	border-width: 0.75rem 0 0.75rem 1.5rem;
-	border-color: transparent transparent transparent var(--blue);
+	border-color: transparent transparent transparent #0c4562;
 }
 .topics01 .box .cat_box p{
 	font-size: 1.6rem;
@@ -1425,11 +1425,11 @@ footer .copyright{
 }
 .topics01 .box .topics_box h2{
 	font-size: 1.4rem;
-	color: var(--blue);
+	color: #0c4562;
 }
 .topics01 .box .topics_box time{
 	display: block;
-	color: var(--blue);
+	color: #0c4562;
 	margin-bottom: 2.5rem;
 	font-size: 1.2rem;
 }
