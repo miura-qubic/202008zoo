@@ -589,7 +589,7 @@ footer .copyright{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 }
 .top05 .box .item .txt h3{
 	color: #d20e38;
@@ -622,11 +622,15 @@ footer .copyright{
 	height: 3px;
 	background: #d20e38;
 }
+@media screen and (min-width:1026px) and ( max-width:1279px) {
+	.top05 .box .item .txt{
+		padding: 10% 1.5rem;
+	}
+}
 @media screen and (min-width:768px) and ( max-width:1279px) {
 	.top05 .box .item{ width: 50%; }
 	.top05 .box .item:nth-of-type(-n+3){ margin-top: 4rem; }
 	.top05 .box .item:nth-of-type(-n+2){ margin-top: 0; }
-	.top05 .box .item .txt{ padding: 1.5rem; }
 	.top05 .box .item .txt h3{ margin-bottom: 2rem; }
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ05 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
