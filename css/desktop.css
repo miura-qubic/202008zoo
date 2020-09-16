@@ -589,7 +589,7 @@ footer .copyright{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* justify-content: center; */
+	justify-content: flex-start;
 }
 .top05 .box .item .txt h3{
 	color: #d20e38;
