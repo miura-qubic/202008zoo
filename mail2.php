@@ -6,6 +6,7 @@ mb_internal_encoding( "utf-8" );
 
 //【２】HTMLエンティティ変換
 
+$contact_type = htmlspecialchars($_POST['contact_type'], ENT_QUOTES);
 $user = htmlspecialchars($_POST['user'], ENT_QUOTES);
 $user_kana = htmlspecialchars($_POST['user_kana'], ENT_QUOTES);
 $comp_name = htmlspecialchars($_POST['comp_name'], ENT_QUOTES);
@@ -21,7 +22,7 @@ $user_kana = mb_convert_kana($user_kana,"sKV");      //「名前」半角カナ�
 
 
 //管理者受信用メール送信処理
-function funcManagerAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg){
+function funcManagerAddress($contact_type,$user,$user_kana,$comp_name,$tel,$phone,$email,$msg){
 
     $mailto = 'info@tree-co.net,tsukiyama@tree-co.net'; 
     // $mailto = 'miura@qu-bic.jp'; 
@@ -31,6 +32,8 @@ function funcManagerAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg)
     $content = "Nail Printer Zooよりお問い合わせメールがありました。\n\n";
     $content .= "内容を確認後、返信してください。\n\n";
     $content .= "--------------------------------\n\n";
+
+    $content .= "【お問い合わせの種類】：".$contact_type."\n";
 
     $content .= "【お名前】：".$user."\n";
     $content .= "【フリガナ】：".$user_kana."\n";
@@ -59,7 +62,7 @@ function funcManagerAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg)
 
 
 //送信者用自動返信メール送信処理
-function funcContactAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg){
+function funcContactAddress($contact_type,$user,$user_kana,$comp_name,$tel,$phone,$email,$msg){
     $mailto = $email;
 
     $subject = "Nail Printer Zooにお問い合わせをいただき、ありがとうございます";
@@ -70,6 +73,8 @@ function funcContactAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg)
     //本文
 
     $content .= "--------------------------------\n\n";
+
+    $content .= "【お問い合わせの種類】：".$contact_type."\n";
 
     $content .= "【お名前】：".$user."\n";
     $content .= "【フリガナ】：".$user_kana."\n";
@@ -111,9 +116,9 @@ function funcContactAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg)
 
 
 //送信者用自動返信メール送信
-$contactAddress = funcContactAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg);
+$contactAddress = funcContactAddress($contact_type,$user,$user_kana,$comp_name,$tel,$phone,$email,$msg);
 //管理者受信用メール送信
-$managerAddress = funcManagerAddress($user,$user_kana,$comp_name,$tel,$phone,$email,$msg);
+$managerAddress = funcManagerAddress($contact_type,$user,$user_kana,$comp_name,$tel,$phone,$email,$msg);
 
 if($contactAddress === "○" && $managerAddress === "○" ){
         header("Location: ./thanks2.html");

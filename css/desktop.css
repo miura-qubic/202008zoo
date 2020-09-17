@@ -1018,7 +1018,14 @@ footer .copyright{
 	margin-bottom: 0;
 	padding:0;
 }
-.contact01 dl.form .txtbox3 label{
+.contact01 dl.form .txtbox4{
+	border-bottom: none;
+	margin-right: 3rem;
+	margin-bottom: 0;
+	padding:0;
+}
+.contact01 dl.form .txtbox3 label,
+.contact01 dl.form .txtbox4 label{
 	padding-left:1rem;
 }
 .icheckbox_square-red, .iradio_square-red{

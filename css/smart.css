@@ -888,6 +888,12 @@ footer .copyright{
 	margin-bottom: 0;
 	padding:0;
 }
+.contact01 dl.form .txtbox4{
+	width: 100%;
+	border-bottom: none;
+	margin-bottom: 0;
+	padding:0;
+}
 .contact01 dl.form .shortbox{
 	display: flex;
 	justify-content: flex-start;
