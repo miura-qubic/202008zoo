@@ -333,6 +333,7 @@ footer .box .rightbox .txt p{
 	font-size: 0.9rem;
 }
 footer .box .rightbox .txt .tel{
+	color: #0c4562;
 	font-size: 2rem;
 	font-style: italic;
 	line-height: 1.2;
@@ -887,6 +888,12 @@ footer .copyright{
 	margin-bottom: 0;
 	padding:0;
 }
+.contact01 dl.form .txtbox4{
+	width: 100%;
+	border-bottom: none;
+	margin-bottom: 0;
+	padding:0;
+}
 .contact01 dl.form .shortbox{
 	display: flex;
 	justify-content: flex-start;
@@ -1036,6 +1043,28 @@ footer .copyright{
 	margin: 0.5rem 0;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ contact01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ thanks01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.thanks01{
+	background: #585858;
+	text-align: center;
+	padding: 2.5rem 0 6rem;
+}
+.thanks01 .logo{
+	width: 15rem;
+	margin: 0 auto 4rem;
+}
+.thanks01 h2{
+	font-size: 1.25rem;
+}
+.thanks01 h3{
+	font-size: 1.1rem;
+	margin-top: 2rem;
+}
+.thanks01 p{
+	margin-top: 2rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ thanks01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ プライバシーポリシー コピーライト ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .privacypolicy{

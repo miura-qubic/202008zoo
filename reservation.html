@@ -202,9 +202,9 @@
 							<dd class="txtbox txtbox1">
 								<div class="select">
 									<label for="date01">第1希望</label>
-									<label class="cal"><input type="text" cmanCLDat="USE:ON,FORM:3" name="" id="" class="form_date"><span class="icon"><i class="far fa-calendar-alt"></i></span></label>
+									<label class="cal"><input type="text" cmanCLDat="USE:ON,FORM:3" name="date01" id="date01" class="form_date"><span class="icon"><i class="far fa-calendar-alt"></i></span></label>
 									<div class="select_in">
-										<select name="date01" id="date01" class="eazy" required>
+										<select name="time01" id="time01" class="eazy" required>
 											<option value="" disabled selected>選択してください</option>
 											<option value="10:00-11:00">10:00-11:00</option>
 											<option value="11:00-12:00">11:00-12:00</option>
@@ -218,9 +218,9 @@
 
 								<div class="select">
 									<label for="date02">第2希望</label>
-									<label class="cal"><input type="text" cmanCLDat="USE:ON,FORM:3" name="" id="" class="form_date"><span class="icon"><i class="far fa-calendar-alt"></i></span></label>
+									<label class="cal"><input type="text" cmanCLDat="USE:ON,FORM:3" name="date02" id="date02" class="form_date"><span class="icon"><i class="far fa-calendar-alt"></i></span></label>
 									<div class="select_in">
-										<select name="date01" id="date01" class="eazy" required>
+										<select name="time02" id="time02" class="eazy" required>
 											<option value="" disabled selected>選択してください</option>
 											<option value="10:00-11:00">10:00-11:00</option>
 											<option value="11:00-12:00">11:00-12:00</option>
@@ -269,13 +269,13 @@
 
 							<div class="inner">
 
-								<input type="checkbox" name="agree03" id="j12" value="チェック済み" class="ichk" required>
+								<input type="checkbox" name="agree01" id="j12" value="チェック済み" class="ichk" required>
 								<label for="j12">複数企業様でご参加いただく際は、各企業様ごとのエントリーをお願いいたします。</label>
 
 							</div>
 							<div class="inner">
 								<p>個人情報の取り扱いについて、プライバシーポリシーをご確認いただき、ご同意の上でご送信ください。</p>
-								<input type="checkbox" name="agree04" id="j13" value="チェック済み" class="ichk" required>
+								<input type="checkbox" name="agree02" id="j13" value="チェック済み" class="ichk" required>
 								<label for="j13">当社の個人情報取り扱いについて同意します。</label>
 								<p>※お申し込みされた開催日の3日前までにご連絡がつかない場合は、大変恐縮ですがキャンセルとさせていただきますのでご了承くださいませ。</p>
 							</div>
@@ -361,7 +361,8 @@
 							<img src="./images/common/icon_tel.png" alt="tel">
 						</div>
 						<div class="txt">
-							<p class="tel">06-6684-9193</p>
+							<p class="tel is_pc">06-6684-9193</p>
+							<a href="tel:0666849193" class="tel is_sp">06-6684-9193</a>
 							<p>受付時間 平日10時～18時<br class="is_sp">（土日・祝祭日を除く）</p>
 						</div>
 					</div>
@@ -388,6 +389,9 @@
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js" defer></script>
 	<script src="./js/ofi.min.js" defer></script>
 	<script src="./js/picturefill.min.js" defer></script>
+	<script src="./js/icheck.min.js" defer></script>
+	<script type="text/javascript" src="./js/jquery.zip2addr.js" defer></script>
+
 	<!-- <script>
 		objectFitImages('.objectCover');
 		objectFitImages('.objectContain');

@@ -77,28 +77,28 @@
 						<h1 class="ttl">Contact</h1>
 						<p>お問い合わせ</p>
 					</div>
-					<form action="mail.php" method="post" name="form1" id="contact_form">
+					<form action="mail2.php" method="post" name="form1" id="contact_form">
 						<p>下記フォームに必要事項を入力の上、ご送信ください。<br class="is_pc">担当スタッフより折り返しご連絡させていただきます。</p>
 						<dl class="form">
 
 							<dd class="wide nobd"><span class="red">*</span>は必須項目です。</dd>
 
-							<!-- <dt>体験会の参加を希望される商品<br>複数選択可<span class="red">*</span></dt>
+							<dt>お問い合わせの種類<span class="red">*</span></dt>
 							<div class="txtbox txtbox1 shortbox">
 
-								<dd class="txtbox txtbox3 shortbox line-radio radio_product1">
-									<input type="checkbox" name="item_type_1" id="item_type_1" class="ichk" value="Rabbit" checked>
-									<label for="item_type_1">Rabbit</label>
+								<dd class="txtbox txtbox4 shortbox line-radio radio_product1">
+									<input type="radio" name="contact_type" id="contact_type1" class="iradio" value="Elefant / Flamingo" checked>
+									<label for="contact_type1">Elefant / Flamingo</label>
 								</dd>
-								<dd class="txtbox txtbox3 shortbox line-radio radio_product2">
-									<input type="checkbox" name="item_type_2" id="item_type_2" class="ichk" value="Flamingo">
-									<label for="item_type_2">Flamingo</label>
+								<dd class="txtbox txtbox4 shortbox line-radio radio_product2">
+									<input type="radio" name="contact_type" id="contact_type2" class="iradio" value="Rabbit">
+									<label for="contact_type2">Rabbit</label>
 								</dd>
-								<dd class="txtbox txtbox3 shortbox line-radio radio_product3">
-									<input type="checkbox" name="item_type_3" id="item_type_3" class="ichk" value="Elephant">
-									<label for="item_type_3">Elephant</label>
+								<dd class="txtbox txtbox4 shortbox line-radio radio_product2">
+									<input type="radio" name="contact_type" id="contact_type3" class="iradio" value="ユーザー登録">
+									<label for="contact_type3">ユーザー登録</label>
 								</dd>
-							</div> -->
+							</div>
 
 							<dt>お名前（漢字）<span class="red">*</span></dt>
 							<dd class="txtbox txtbox1">
@@ -364,7 +364,8 @@
 							<img src="./images/common/icon_tel.png" alt="tel">
 						</div>
 						<div class="txt">
-							<p class="tel">06-6684-9193</p>
+							<p class="tel is_pc">06-6684-9193</p>
+							<a href="tel:0666849193" class="tel is_sp">06-6684-9193</a>
 							<p>受付時間 平日10時～18時<br class="is_sp">（土日・祝祭日を除く）</p>
 						</div>
 					</div>
@@ -389,6 +390,8 @@
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js" defer></script>
 	<script src="./js/ofi.min.js" defer></script>
 	<script src="./js/picturefill.min.js" defer></script>
+	<script src="./js/icheck.min.js" defer></script>
+	<script type="text/javascript" src="./js/jquery.zip2addr.js" defer></script>
 	<!-- <script>
 		objectFitImages('.objectCover');
 		objectFitImages('.objectContain');
