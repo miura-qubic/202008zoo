@@ -20,6 +20,7 @@ const pagename = document.getElementById("pagename").value;
 
 $(function () {
 	$("body").removeClass("preload");
+	objectFitImages();
 	
 	// スライダー
 	let slide_item = $('#slider .item').length;
