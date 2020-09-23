@@ -97,7 +97,7 @@ function funcContactAddress($contact_type,$user,$user_kana,$comp_name,$tel,$phon
     $content .= "Tree Company株式会社\n";
     // $content .= "【東京本社】 〒165-0075 東京都新宿区高田馬場3-23-7 JESCO高田馬場6F \n";
     $content .= "【住所】 〒550-0015 大阪府大阪市西区南堀江2-13-30 SUNEASTBldg.901 \n";
-    $content .= "【電話番号】 06-6684-9193 \n";
+    $content .= "【電話番号】 03-6279-2628 \n";
     $content .= "【MAIL】 info@tree-co.net\n";
     $content .= "【営業時間】平日 10:00～18:00\n\n";
     $content .= "--------------------------------\n";
